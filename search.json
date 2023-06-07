@@ -105,16 +105,30 @@
     "text": "7.3 Practice on your own\nNow that we have worked through some examples with Palmer Penguins, let’s try and work through a data set of our own.\nAttached here is a (Slug data set.)\nRemember, you will need to import this file into R in the correct format!\nYour task is to [1] input it into R, [2] investigate the variables and classes of these variables, [3] produce an output using each of the functions we just covered, [4] and at least one example where you use select, rename, arrange, filter, mutate, and group_by in the same command line. In part 3, for each change to the data set, save the changed data set as a new object. For part 4, save this object as, ‘Final_Changes’. If you conduct more than one iteration of part 4, add the associated number at the end of each name. For example, Final_Changes_1, Final_Changes_2, etc."
   },
   {
+    "objectID": "lesson08.html",
+    "href": "lesson08.html",
+    "title": "8  Lesson 08",
+    "section": "",
+    "text": "9 Section"
+  },
+  {
+    "objectID": "lesson08.html#sub-heading",
+    "href": "lesson08.html#sub-heading",
+    "title": "8  Lesson 08",
+    "section": "8.1 Sub heading",
+    "text": "8.1 Sub heading"
+  },
+  {
     "objectID": "resources.html",
     "href": "resources.html",
-    "title": "8  Resources and cheat sheets",
+    "title": "9  Resources and cheat sheets",
     "section": "",
     "text": "Cheat sheet links\n(Data Table)\n(dplyr and tidyr)\n(ggplot)"
   },
   {
     "objectID": "Glossary.html",
     "href": "Glossary.html",
-    "title": "9  Terms of endearment",
+    "title": "10  Terms of endearment",
     "section": "",
     "text": "Shout out to Daniel Bliss for listening to me think about loud during this process and also for being the first person to proof read.\nChief editor: Daniel D’Bliss"
   },

@@ -1,0 +1,26 @@
+# Welcome to an introductory R course for natural scientists {.unnumbered}
+
+### What this course will cover: 
+### Part 1: The Reasoning {.unnumbered}
+
+  - **Introduction:** What is programming and what  is R? 
+
+  - **R as a tool:** How can we use R? 
+
+### Part 2: The Beginnings {.unnumbered}
+
+  - **Starting a project:** Importing data 
+
+  - **Basic functionality:** Logic and shortcuts
+  
+  - **Getting fancy widdit:** What are functions, packages, and how can we use them? 
+  
+  - **Coding etiquette:** How to write simple and reproducible code
+
+### Part 3: Buckle up {.unnumbered}
+
+  - **Data wrangling:** Data wrangling with base R and other important packages
+ 
+
+
+

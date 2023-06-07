@@ -1,0 +1,44 @@
+project:
+  type: book
+
+book:
+  title: "One code to rule them all (┛ಠ_ಠ)┛彡O"
+  author: "Jared Adam"
+  date: "6/6/2023"
+  chapters:
+    - index.qmd
+    - part: "The Reasoning"
+      chapters:
+        - lesson01.qmd
+        - lesson02.qmd
+    - part: "The Beginnings"
+      chapters: 
+        - lesson03.qmd
+        - lesson04.qmd
+        - lesson05.qmd
+        - lesson06.qmd
+    - part: "Buckle up"
+      chapters: 
+        - lesson07.qmd
+    - part: "Last part"
+      chapters: 
+        - resources.qmd
+        - Glossary.qmd
+    - references.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    theme: cosmo
+    title-block-banner: "#9e74f1"
+    toc: true
+  pdf: 
+    pdf-engine: xelatex
+    documentclass: scrreprt
+execute: 
+  freeze: auto
+
+
+
+

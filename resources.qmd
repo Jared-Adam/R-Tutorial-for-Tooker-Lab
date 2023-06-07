@@ -1,0 +1,7 @@
+# Resources and cheat sheets 
+### Cheat sheet links {.unnumbered}
+([Data Table](https://pennstateoffice365-my.sharepoint.com/:b:/g/personal/jqa5357_psu_edu/EfdtqGr2gg1EkH85xjtJ7fEBncCHPqt6RsinA0nv6J-wlg?e=Bpx9EJ))
+
+([dplyr and tidyr](https://pennstateoffice365-my.sharepoint.com/:b:/g/personal/jqa5357_psu_edu/Editnu7i18pNowweklKZn7MBXHybv1gFChrbOTRXLJIv3Q?e=Esw6NB))
+
+([ggplot](https://pennstateoffice365-my.sharepoint.com/:b:/g/personal/jqa5357_psu_edu/EfNjyEtk5r5AiYeYCcV4tsABtDg0QNlnfSgzJrwtuRza1A?e=cuvesU))

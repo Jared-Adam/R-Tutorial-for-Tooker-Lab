@@ -1,0 +1,63 @@
+---
+code-block-bg: true
+code-block-border-left: "#1abcd9"
+highlight-style: atom-one 
+---
+#: Basic functionality
+## Shortcuts, arithmetic commands, logic, and other helpful tools 
+### Shortcuts {.unnumbered} 
+
+#### Run {.unnumbered}
+
+|    **Task**    | **Windows & Linux** |     **Mac**    |
+|----------------|---------------------|----------------|
+|     Run        | `Ctrl + Enter`      |      `Cmd + Return`          |
+
+
+#### Shortcuts for editing {.unnumbered}
+
+
+
+| **Task**             | **Windows & Linux** | **Mac**           |
+|----------------------|---------------------|-------------------|
+| Copy                 | `Ctrl + C`          | `Cmd + C`         |
+| Paste                | `Ctrl + V`          | ` Cmd + V`        |
+| Undo                 | `Ctrl + Z`          | `Cmd + Z`         |
+| Redo                 | `Ctrl + Shift + Z`  | `Cmd + Shift + Z` |
+| Select All           | `Ctrl + A`          | `Cmd + A`         |
+| Indent               | `Tab`               | `Tab`             |
+| Outdent              | `Shift + Tab`       | `Shift + Tab`     |
+| Insert pipe operator | `Cmd + Shift + M`   | `Cmd + Shift + M` |
+
+### Arithmetic operators {.unnumbered}
+
+| **Task**       | **Operator** | **Example** |
+|----------------|--------------|-------------|
+| Addition       | `+`          | `x + y`     |
+| Substraction   | `-`          | `x - y`     |
+| Multiplication | `*`          | `x * y`     |
+| Division       | `/`          | `x / y`     |
+| Exponent       | `^`          | `x ^ y`     |
+
+### Logic commands {.unnumbered} 
+
+| **Task**                  | **Operator** | **Example** |
+|---------------------------|--------------|-------------|
+| Equal                     | `==`         | `x == y`    |
+| Not equal                 | `!=`         | `x != y`    |
+| Greater than              | `>`          | `x > y`     |
+| Less than                 | `<`          | `x < y`     |
+| Greater than or equal to  | `>=`         | `x >= y`    |
+| Less than or equal to     | `<=`         | `x <= y`    |
+
+
+### Other important operators {.unnumbered}
+
+| **Task**                                                                                | **Operator**   | **Example**                                                        |
+|------------------------------------------------------------------------------------------------|----------|----------------------------------------------------------------|
+| Call for the help menu for the respective function                                             | `?`      | `?mean`                                                        |
+| Assigning a name or value                                                                      | `<-`     | `Name <- "Chop"`                                              |
+| To access one variable in a data set                                                            | `$`      | `DataSet$IWantThisColumn`                                      |
+| Searching or calling exact characters                                                          | `""`     | `"Chop Spring"`                                                      |
+| Concatenate (c), combines arguments, both numbers or words, into a vector                      | `c()`    | `Name <- c("Jared", "Daniel", "Chop")` `Numbers <- c(1,2,3)` |
+| Another form of concatenation used when writing long scripts of code which span multiple lines | `+`      | `This line + this line too`                                |

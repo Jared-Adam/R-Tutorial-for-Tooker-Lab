@@ -1,0 +1,349 @@
+---
+code-block-bg: true
+code-block-border-left: "#1abcd9"
+highlight-style: atom-one 
+---
+#: Data wrangling 
+## Cleaning our data in R 
+###  R > excel {.unnumbered}
+Before we begin wrangling our data set, let's quickly discuss why cleaning data in R is important. 
+First and foremost, my Excel file never needs to change. 
+Along with this, I only need to save it once. 
+No saving a new copy every time I make a new column or want to write a formula. 
+
+In this section, we will go over some important packages and key functions that will aid in the transition from Excel-based data wrangling to exclusively R-based data wangling. 
+SO, without further ado, lettuce begin. 
+
+### What we use to wrangle {.unnumbered}
+When we wrangle our data sets, there is one 'umbrella' package I find to me the most versatile. 
+This is **tidyverse**.
+**Tidyverse** houses many useful packages for data manipulation, but in this section I will only be referring to one. 
+This package is the **dplyr** package. 
+While I rely on these packages a lot, I also use functions pre-installed in Base R while wrangling. 
+
+Please see the cheat sheets (here) for both of these packages.
+
+## dplyr Examples
+
+
+Let's start by installing the needed packages. Remember to remove the # symbol to install these packages. We will also call in our Palmer Penguins data set that you downloaded earlier.
+````{r} 
+#| output: false
+#install.packages("dplyr")
+library(dplyr)
+
+#install.packages("tidyverse")
+library(tidyverse)
+
+library(palmerpenguins)
+data(package = 'palmerpenguins')
+```
+
+### NAs in R
+Before we begin, we must first check for missing values.
+R *does not* love when NAs get thrown into the mix, especially when running numerical commands, like the **mean** function.  
+To resolve any missing values, we must first determine if there are any NAs, and where they may be. 
+
+First, we will look to see IF and WHERE potential NAs are in our data set.
+We will do this by using the **which** function, followed by the **is.na** function within out penguins data set. 
+What these two functions do together is which locates all of the columns where NAs are present, based on the **is.na** function. 
+If we wanted to find all of the columns where there were no NAs, we could simply change **is.na** to **!is.na**. 
+````{r}
+which(is.na(penguins), arr.ind = TRUE)
+```
+
+Now that we see there are NAs riddled throughout, we will name a new object (using the same name), but omitting all NAs. 
+
+In this example, I am using the **na.omit** function to remove all NAs from our penguin data set. 
+I am also naming this new object (penguins again for ease). 
+````{r}
+penguins <-
+  na.omit(penguins) #I must add this because there are NAs within this data set and these functions will not work otherwise 
+```
+
+### select() {.unnumbered}
+
+Let's start by selecting for only the columns we are interested in. 
+This can be useful when removing variables we are not currently interested in. 
+**Remember**, at any manipulation, you can save the changes as a new object which will maintain the integrity of the original if you must back track for whatever reason. 
+
+In this example, we use the **select** function to choose which columns we want to look at. 
+````{r}
+# select()
+penguins %>% #From the penguins data set
+  select(species, bill_length_mm, year) # selecting columns species, bill_length, and      year 
+```
+
+Now that we have selected for certain columns, let's say we want to view everything except for one or several columns.
+Instead of typing out every column we want, we can simple type out the one(s) we don't.
+
+In this example, I tell R to remove the sex column using the **select** function again. 
+````{r}
+# select()
+penguins %>% #From the penguins data set
+  select(-sex)# selecting all columns except for sex
+
+```
+
+Within the **select** function, you can also look for items based on their spelling. This can be especially helpful if you suspect there to be a spelling error somewhere if your data set. In this example, we will search our data set for any variable name that starts with the letter 'b'. 
+````{r}
+# select()
+penguins %>% #From the penguins data set
+  select(starts_with('b')) # selecting columns that start with 'b' and using starts_with
+```
+
+
+### rename() {.unnumbered}
+
+Now that we have viewed and selected for different columns and such, we manipulate our data set further.
+We will start by renaming some columns. 
+Notice with rename, there are two methods you can use. 
+One *without* quotation marks, and one *with.*
+
+In this example, using the **rename** function, I am changing 'species' to 'Species and 'year' to 'Year'.
+````{r}
+# rename()
+penguins %>%
+  select(species, bill_length_mm, year) %>% #selecting the columns I want to look at
+  rename( #rename function. notice here the two methods of changing names
+    Species = species, #changing species to Species without quotes
+    "Year" = year #changing year to Year with quotes
+  )
+```
+
+### arrange() {.unnumbered}
+
+let's arrange some stuff
+this is equivalent to sort!
+
+One of the first steps we take in *Excel* is the **sorting** of our data sets.
+Whether that be the sorting of plots, or dates, or anything; we start by sorting. 
+The same is possible in R. 
+We do this using the **arrange** function.
+
+In this example, we will be sorting by bill length in an increasing order (smallest to largest). Notice here that R will *default* to the order of small-large with the **arrange** function.  
+````{r}
+# select() and arrange()
+penguins %>%
+  select(species, bill_length_mm, year) %>% 
+  arrange(bill_length_mm) #I want to look at bill length in an increasing order from      smallest to largest 
+```
+
+In this example, we will be sorting by bill length in a decreasing order (largest to smallest).
+Notice here, we need the **arrange** function to tell R we will be changing the order. 
+Once that command is established, we can further command the order. 
+
+In this example, I use the **arrange** function, followed by the **desc** function (descending), commanding the order of bill length to go from big to small values. 
+````{r}
+# select(), arrange(), and desc()
+penguins %>%
+  select(species, bill_length_mm, year) %>% 
+  arrange(desc(bill_length_mm)) #using the desc() function to command the order from      largest to smallest 
+```
+
+Now, let's say we want to see bill length in the same descending order, but we want order this by year. 
+This is done with a very simple addition to our *arrange()* section. 
+To accomplish this, we add the year variable first (remembering the the default for **arrange** is small-large) followed by the bill length command (which is the same as the previous example.)
+````{r}
+# select() and arrange()
+penguins %>%
+  select(species, bill_length_mm, year) %>% 
+  arrange(year, desc(bill_length_mm)) #year and bill separated by a comma
+```
+
+### filter() {.unnumbered}
+Within R, we also have the ability to subset out data sets and pull out rows with specific values. 
+Let's say I *only* want to look at data from *2007.* 
+To accomplish this, we will use the **filter** function. 
+
+In this example, we will be adding the **filter** function as well as recall our knowledge of ([operators](lesson04.qmd)) within R. 
+````{r}
+# select() and filter()
+penguins %>%
+  select(species, bill_length_mm, bill_depth_mm, year) %>% 
+  filter(year == 2007) #using the '==' operator to show everything with the year 2007
+```
+
+What if I want to see within the year 2007, which penguins have bill lengths higher than the mean of them *all*?
+This can be accomplished by, again, adding an operator, but also calling another function. 
+We will command R further with **mean** function from base R. 
+Notice I am separating each line in the **filter** function with a comma. 
+This allows me to add multiple commands within the same function. 
+````{r}
+# select(), filter(), and mean()
+
+penguins %>%
+  select(species, bill_length_mm, year) %>% 
+  filter(
+    year == 2007,#using the '==' operator to show everything with the year 2007
+    bill_length_mm < mean(bill_length_mm), # using the '<' to to view every row where the bill length is less than the avg bill length 
+  ) 
+```
+
+
+Let's say we are interested in manipulating our data set by species.  
+I want to know how many species I have to further filter this set. 
+To accomplish this, I will use the the **count** function to view how many species I have and their associated values within the data set. 
+````{r}
+# count()
+penguins %>% 
+  count(species)
+```
+
+It appears there are three species within my data set.
+For one reason or another, I want to filter out *Adelie* from further interpretations. 
+To do this, I will add another line below the bill length filter. 
+
+This new line says *when species equals Chinstrap OR Gentoo*, keep them in the data set.
+````{r}
+# filter()
+penguins %>%
+  select(species, bill_length_mm, year) %>% 
+  filter(
+    year == 2007,#using the '==' operator to show everything with the year 2007
+    bill_length_mm < mean(bill_length_mm),# using the '<' to to view every row where the bill length is less than the avg bill length 
+    species == "Chinstrap" | species == "Gentoo" # look in species and pull out chinstrap and gentoo. | allows to command two species, similar to 'or'
+  ) 
+```
+
+
+Another way to accomplish the same task is to tell R which values to *exclude*, rather than *include.* 
+This is done by using the 'does not equal' operator to command R to return every species value that is not Adelie. 
+````{r}
+# filter()
+penguins %>%
+  select(species, bill_length_mm, year) %>% 
+  filter(
+    year == 2007,#using the '==' operator to show everything with the year 2007
+    bill_length_mm < mean(bill_length_mm),# using the '<' to to view every row where the bill length is less than the avg bill length 
+    species != "Adelie" #does not equal operator
+  ) 
+
+#the output is the same!
+```
+
+Now that we only the data we want to see, let's create some new columns and row values. 
+Let's say we want to add a new column combining *species and year* and a new column with the *rounded values of bill length*. 
+We will be using the **mutate** function here.
+Along with this, we then want to *rearrange* our data set for viewing purposes of our new variables. 
+This will be done with the **select** function. 
+
+In this example, I have created the column 'sp_year' which will contain both species and year, but keep their respective values separated by a dash. 
+I then created a new column of the rounded bill length values using the **round** function. 
+*Notice* with these new columns, the first step is to name the new column and then command R what to put in. 
+Lastly, using the **select** function, I command R to order this data set as follows. 
+````{r}
+penguins %>%
+  select(species, bill_length_mm, year) %>% 
+  mutate( #mutate()
+    sp_year = paste(species, "-", year), #adding a new column named 'sp_year' and pasting the species column and year column with a dash between them. 
+    rn_bill_length_mm = round(bill_length_mm) #creating a column of rounded bill lengths 
+  ) %>% 
+  select(species, year, sp_year, bill_length_mm, rn_bill_length_mm) #placing these new columns an order I would like 
+```
+
+### summarize() {.unnumbered}
+
+Now that we are confident in our wrangling, we can investigate some summary statistics. 
+
+First, let's look at the means and standard deviations of both bill length and depth.
+This will be done by name new columns and then using either the **mean** function or **sd** function to produce a desired output. 
+````{r}
+
+penguins %>% 
+  summarize( #summarize to run summary stats 
+  bill_length_mean = mean(bill_length_mm), #new column with mean value of bill length
+  bill_length_sd = sd(bill_length_mm), #new column with standard deviation value of bill length
+  bill_depth_mean = mean(bill_depth_mm), #new column with mean value of bill depth
+  bill_depth_sd = sd(bill_depth_mm) #new column with standard deviation value of bill depth
+  )
+```
+
+
+The last output was informative, but lets look a little deeper.
+I now want to group these new values by species. 
+Using the **group_by** function, we can tell R to group our data set by one, or more variables. 
+
+In this example, I am telling R to **group_by** species, and then provide me with the means and standard deviations of bill length and depth. 
+````{r}
+
+penguins %>% 
+  group_by(species) %>% #grouping by one column, species 
+  summarize( #summarize to run summary stats 
+    bill_length_mean = mean(bill_length_mm), #new column with mean value of bill length
+    bill_length_sd = sd(bill_length_mm), #new column with standard deviation value of bill length
+    bill_depth_mean = mean(bill_depth_mm), #new column with mean value of bill depth
+    bill_depth_sd = sd(bill_depth_mm) #new column with standard deviation value of bill depth
+  )
+```
+
+Following the trend of the last example, let's further group our data set. 
+I want to now see these same values but by species AND year. 
+Using the **group_by** function again, we can accomplish this. 
+
+In this example, the only change is I added ', year' into my **group_by** function. 
+````{r}
+
+
+penguins %>% 
+  group_by(species, year) %>% #grouping by two columns, species and year 
+  summarize( #summarize to run summary stats 
+    bill_length_mean = mean(bill_length_mm), #new column with mean value of bill length
+    bill_length_sd = sd(bill_length_mm), #new column with standard deviation value of bill length
+    bill_depth_mean = mean(bill_depth_mm), #new column with mean value of bill depth
+    bill_depth_sd = sd(bill_depth_mm) #new column with standard deviation value of bill depth
+  )
+```
+
+
+## Practice on your own 
+
+Now that we have worked through some examples with Palmer Penguins, let's try and work through a data set of our own. 
+
+
+Attached here is a ([Slug data set.](https://pennstateoffice365-my.sharepoint.com/:x:/r/personal/jqa5357_psu_edu/Documents/Documents/Research/R/Intern%20Tutorial/excel/Slugs.xlsx?d=w34a2237a9fc24c799429b9f946597a3b&csf=1&web=1&e=fSCzeR))
+
+**Remember**, you will need to import this file into R in the correct format!
+
+Your task is to [1] input it into R, [2] investigate the variables and classes of these variables, [3] produce an output using *each* of the functions we just covered, [4] and at least *one* example where you use **select, rename, arrange, filter, mutate, and group_by** in the same command line. In part 3, for each change to the data set, save the changed data set as a new object. For part 4, save this object as, 'Final_Changes'. If you conduct more than one iteration of part 4, add the associated number at the end of each name. For example, Final_Changes_1, Final_Changes_2, etc.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

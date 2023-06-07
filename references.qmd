@@ -1,0 +1,19 @@
+# References {.unnumbered}
+
+**What is R?**
+
+1. nd. "What is R?" *The R Foundation*. ([link](https://www.r-project.org/about.html))
+
+**RStudio vs r**
+
+2. nd. "R and RStudio" *BYU: Department of Statistics*. ([link](https://statistics.byu.edu/r-and-rstudio))
+
+**Excel vs r**
+
+3. Abrahams, Amieroh. February 23,2023. "Why should I use R: The Excel R Data Wrangling comparison" *jumping rivers*. ([link](https://www.jumpingrivers.com/blog/comparing-r-excel-data-wrangling/))
+
+**Style**
+
+4. nd. "The tidyverse style guide" *tidyverse*. ([link](https://style.tidyverse.org/))
+
+5. nd. "Google's R Style Guide" *styleguide*. ([link](https://google.github.io/styleguide/Rguide.html))

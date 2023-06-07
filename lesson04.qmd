@@ -1,9 +1,4 @@
----
-code-block-bg: true
-code-block-border-left: "#1abcd9"
-highlight-style: atom-one 
----
-#: Basic functionality
+# Basic functionality
 ## Shortcuts, arithmetic commands, logic, and other helpful tools 
 ### Shortcuts {.unnumbered} 
 

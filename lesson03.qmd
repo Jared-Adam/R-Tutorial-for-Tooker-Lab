@@ -1,9 +1,4 @@
----
-code-block-bg: true
-code-block-border-left: "#1abcd9"
-highlight-style: atom-one 
----
-#: Starting a project 
+# Starting a project 
 ## Starting a new project
 To begin, we must first open a new project. 
 
@@ -38,7 +33,8 @@ There are two common ways of doing this.
 
 The first step is to determine where R currently thinks our working directory is. 
 To do this, we use the **getdw** function. 
-````{r}
+
+```{r}
 #| output: false
 
 getwd()
@@ -52,7 +48,8 @@ If we wish to change this, we have two options.
 First, we will use the **setwd** package. 
 Within the  parentheses of this function, we will write out the desired pathway. 
 Let's say I wish to be more specific than just the *Documents* folder. 
-````{r}
+
+```{r}
 #| output: false
 setwd("C:/Users/jsada/OneDrive - The Pennsylvania State University/Documents/Research/R/Intern Tutorial/Book")
 ```
@@ -66,14 +63,16 @@ From here, you will navigate to the folder you wish to pull data from.
 Now that we have our working directory set, we can take a look into the folder. 
 
 To see how many files are in my directory, I will use the **length** function. 
-````{r}
+
+```{r}
 #| output: false
 length(list.files())
 #output: 24
 ```
 
 To see the first five files within my directory, I will use the **head** function. 
-````{r}
+
+```{r}
 #| output: false
 head(list.files())
 #output:
@@ -82,13 +81,15 @@ head(list.files())
 #[5] "directory.png" "Glossary.qmd" 
 ```
 
-The last command we will run to investigate our working directory is the **%in%** operator. We will use this operator to see if there is specific file within our directory. This operator will provide us with a logical out (TRUE or FALSE). When calling a specific object, we must use either half, or full parentheses.  
-````{r}
+The last command we will run to investigate our working directory is the **%in%** operator. We will use this operator to see if there is specific file within our directory. This operator will provide us with a logical out (TRUE or FALSE). When calling a specific object, we must use either half, or full parentheses.
+
+```{r}
 #| output: false 
 'Book.Rproj' %in% list.files()
 
 #output: TRUE
 ```
+
 #### Github{.unnumbered}
 In this book, I will not cover using the Github platform for data storage.
 If you wish to explore this further, please see the linked tutorial below. 
@@ -113,7 +114,8 @@ When it comes to data manipulations, statistical tests, model building, and deve
 To determine this for single variables or values, we use the **class** function. 
 
 Copy these examples into your script to try this function out. 
-````{r}
+
+```{r}
 #| output: false
 # numeric 
 x <- 10

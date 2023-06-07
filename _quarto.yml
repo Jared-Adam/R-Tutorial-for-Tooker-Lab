@@ -33,12 +33,16 @@ format:
     theme: cosmo
     title-block-banner: "#9e74f1"
     toc: true
+    code-block-bg: true
+    code-block-border-left: "#1abcd9"
+    highlight-style: atom-one
+    code-copy: true
+    code-fold: false
+    code-overflow: wrap
+    code-tools: true
+    code-link: true
   pdf: 
     pdf-engine: xelatex
     documentclass: scrreprt
 execute: 
   freeze: auto
-
-
-
-

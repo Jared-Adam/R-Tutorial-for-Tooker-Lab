@@ -1,9 +1,4 @@
----
-code-block-bg: true
-code-block-border-left: "#1abcd9"
-highlight-style: atom-one 
----
-#: R as a tool
+# R as a tool
 ## Excel vs. R and why we should care
 ### Excel vs R {.unnumbered}
 When choosing between R and Excel, it is important to understand how both solutions can get you the results you need. However, one can make it an easy, reputable, convenient process, whereas the other can make it an extremely frustrating, time-consuming process **prone to human errors**.

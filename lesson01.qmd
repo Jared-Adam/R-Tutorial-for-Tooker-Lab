@@ -1,9 +1,4 @@
----
-code-block-bg: true
-code-block-border-left: "#1abcd9"
-highlight-style: atom-one 
----
-#: Introduction  
+# Introduction  
 ## What is programming? 
 ### Programming {.unnumbered}
 Computer programming is the process of **writing code** to facilitate actions in a computer, application, or software program, and instructs them on how to perform. 

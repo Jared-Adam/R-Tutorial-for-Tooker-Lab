@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>One code to rule them all (┛ಠ_ಠ)┛彡O - 1&nbsp; What is programming?</title>
+<title>One code to rule them all (┛ಠ_ಠ)┛彡O - 1&nbsp; Introduction</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -80,7 +114,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./lesson01.html">The Reasoning</a></li><li class="breadcrumb-item"><a href="./lesson01.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">What is programming?</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./lesson01.html">The Reasoning</a></li><li class="breadcrumb-item"><a href="./lesson01.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -93,7 +127,7 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">What is programming?</span></h1>
+      <div class="quarto-title-block"><div><h1 class="title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
                       </div>
   </div>
     
@@ -139,13 +173,13 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./lesson01.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">What is programming?</span></span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./lesson02.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Excel vs.&nbsp;R and why we should care</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">R as a tool</span></span></a>
   </div>
 </li>
       </ul>
@@ -162,25 +196,25 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./lesson03.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Starting a new project</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Starting a project</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./lesson04.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Shortcuts, arithmetic commands, logic, and other helpful tools</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Basic functionality</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./lesson05.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">: Getting fancy widdit</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Getting fancy widdit</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./lesson06.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">: Coding etiquette</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Coding etiquette</span></span></a>
   </div>
 </li>
       </ul>
@@ -197,7 +231,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./lesson07.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Cleaning our data in R</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Data wrangling</span></span></a>
   </div>
 </li>
       </ul>
@@ -241,13 +275,17 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#what-is-r" id="toc-what-is-r" class="nav-link active" data-scroll-target="#what-is-r">What is R?</a></li>
-  <li><a href="#getting-started-with-r" id="toc-getting-started-with-r" class="nav-link" data-scroll-target="#getting-started-with-r"><span class="header-section-number">1.1</span> Getting started with R</a>
+  <li><a href="#what-is-programming" id="toc-what-is-programming" class="nav-link active" data-scroll-target="#what-is-programming"><span class="header-section-number">1.1</span> What is programming?</a>
+  <ul class="collapse">
+  <li><a href="#programming" id="toc-programming" class="nav-link" data-scroll-target="#programming">Programming</a></li>
+  <li><a href="#what-is-r" id="toc-what-is-r" class="nav-link" data-scroll-target="#what-is-r">What is R?</a></li>
+  </ul></li>
+  <li><a href="#getting-started-with-r" id="toc-getting-started-with-r" class="nav-link" data-scroll-target="#getting-started-with-r"><span class="header-section-number">1.2</span> Getting started with R</a>
   <ul class="collapse">
   <li><a href="#downloading-r" id="toc-downloading-r" class="nav-link" data-scroll-target="#downloading-r">Downloading R</a></li>
   <li><a href="#r-vs-rstudio" id="toc-r-vs-rstudio" class="nav-link" data-scroll-target="#r-vs-rstudio">R vs RStudio</a></li>
   </ul></li>
-  <li><a href="#the-big-four" id="toc-the-big-four" class="nav-link" data-scroll-target="#the-big-four"><span class="header-section-number">1.2</span> The big four</a>
+  <li><a href="#the-big-four" id="toc-the-big-four" class="nav-link" data-scroll-target="#the-big-four"><span class="header-section-number">1.3</span> The big four</a>
   <ul class="collapse">
   <li><a href="#components-of-rstudio" id="toc-components-of-rstudio" class="nav-link" data-scroll-target="#components-of-rstudio">Components of RStudio</a></li>
   </ul></li>
@@ -260,17 +298,22 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p>#: Introduction<br>
-### Programming {.unnumbered} Computer programming is the process of <strong>writing code</strong> to facilitate actions in a computer, application, or software program, and instructs them on how to perform.</p>
+<section id="what-is-programming" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="what-is-programming"><span class="header-section-number">1.1</span> What is programming?</h2>
+<section id="programming" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="programming">Programming</h3>
+<p>Computer programming is the process of <strong>writing code</strong> to facilitate actions in a computer, application, or software program, and instructs them on how to perform.</p>
 <p>Each ‘type’ of programming comes with it’s own language. A <strong>programming language</strong> is a vocabulary and set of grammatical rules for instructing a computer or computing device to perform specific tasks. Examples of programming languages include, but are not limited to , C, C++, Java, Python, and of course, <strong>R</strong>.</p>
 <p>The <strong>purpose</strong> of programming is to find a sequence of instructions that will automate the performance of a task on a computer.</p>
+</section>
 <section id="what-is-r" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="what-is-r">What is R?</h3>
 <p>At it’s root, R is a language and environment for statistical computing and graphic building. R provides a variety of statistical (<em>liner and nonlinear modeling, classical statistical tests, time series analysis, classification, etc.</em>) and graphical techniques (<em>Base R, ggplot, etc.</em>).</p>
 <p>This software <strong>excels</strong> in it’s ease of producing publication-ready high-quality plots, use of mathematical symbols, implementation of equations and formulas, and much more. Along with this, R is also a free, open-source software available on a wide variety of platforms, including both <strong>Windows and MacOS</strong>.</p>
 </section>
-<section id="getting-started-with-r" class="level2" data-number="1.1">
-<h2 data-number="1.1" class="anchored" data-anchor-id="getting-started-with-r"><span class="header-section-number">1.1</span> Getting started with R</h2>
+</section>
+<section id="getting-started-with-r" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="getting-started-with-r"><span class="header-section-number">1.2</span> Getting started with R</h2>
 <section id="downloading-r" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="downloading-r">Downloading R</h3>
 <p><a href="https://rstudio-education.github.io/hopr/starting.html">How to download R, by Garrett Grolemund</a></p>
@@ -281,8 +324,8 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>RStudio</strong> integrates with R as an IDE (Integrated Development Environment) to provide further functionality. To reiterate, RStudio acts as a <em>housing</em> of sorts to allow for the functionality and script writing of R. Think of saving photos to iCloud. Without a device, your photos would be free-floating and rather inaccessible. <em>BUT</em>, with a device (housing), you are able to access these photos. <strong>RStudio</strong> acts similarly with R in that it provides an environment to use the software. There are other text editors and IDEs that are available, <strong>but we recommend starting with RStudio.</strong> RStudio helps you use the version of R on your computer, but it does not come with it’s own version of R.</p>
 </section>
 </section>
-<section id="the-big-four" class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="the-big-four"><span class="header-section-number">1.2</span> The big four</h2>
+<section id="the-big-four" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="the-big-four"><span class="header-section-number">1.3</span> The big four</h2>
 <section id="components-of-rstudio" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="components-of-rstudio">Components of RStudio</h3>
 <div class="quarto-figure quarto-figure-center">
@@ -317,12 +360,12 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="r console.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">A screenshot of my Conolse</figcaption>
+<figcaption class="figure-caption">A screenshot of my Conolse. This is what an my ran script output looks like.</figcaption>
 </figure>
 </div>
 </section>
-<section id="the-global-environment" class="level4" data-number="1.2.0.1">
-<h4 data-number="1.2.0.1" class="anchored" data-anchor-id="the-global-environment"><span class="header-section-number">1.2.0.1</span> The Global Environment</h4>
+<section id="the-global-environment" class="level4" data-number="1.3.0.1">
+<h4 data-number="1.3.0.1" class="anchored" data-anchor-id="the-global-environment"><span class="header-section-number">1.3.0.1</span> The Global Environment</h4>
 <p>This pane is where any of your imported or created objects will go. These could include, but are not limited to, data sets, functions, vectors, values, etc. If you wish to view your full data set, you can click on the the object. If you wish to view the the column and row names, but not view the full object, you can select the blue and white arrow on the left-hand side of the object name.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -341,6 +384,8 @@ ul.task-list li input[type="checkbox"] {
 </figure>
 </div>
 
+
+<!-- -->
 
 </section>
 </section>
@@ -426,6 +471,57 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
+  const viewSource = window.document.getElementById('quarto-view-source') ||
+                     window.document.getElementById('quarto-code-tools-source');
+  if (viewSource) {
+    const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+    viewSource.addEventListener("click", function(e) {
+      if (sourceUrl) {
+        // rstudio viewer pane
+        if (/\bcapabilities=\b/.test(window.location)) {
+          window.open(sourceUrl);
+        } else {
+          window.location.href = sourceUrl;
+        }
+      } else {
+        const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+        modal.show();
+      }
+      return false;
+    });
+  }
+  function toggleCodeHandler(show) {
+    return function(e) {
+      const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+      for (let i=0; i<detailsSrc.length; i++) {
+        const details = detailsSrc[i].parentElement;
+        if (show) {
+          details.open = true;
+        } else {
+          details.removeAttribute("open");
+        }
+      }
+      const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+      const fromCls = show ? "hidden" : "unhidden";
+      const toCls = show ? "unhidden" : "hidden";
+      for (let i=0; i<cellCodeDivs.length; i++) {
+        const codeDiv = cellCodeDivs[i];
+        if (codeDiv.classList.contains(fromCls)) {
+          codeDiv.classList.remove(fromCls);
+          codeDiv.classList.add(toCls);
+        } 
+      }
+      return false;
+    }
+  }
+  const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+  if (hideAllCode) {
+    hideAllCode.addEventListener("click", toggleCodeHandler(false));
+  }
+  const showAllCode = window.document.getElementById("quarto-show-all-code");
+  if (showAllCode) {
+    showAllCode.addEventListener("click", toggleCodeHandler(true));
+  }
   function tippyHover(el, contentFn) {
     const config = {
       allowHTML: true,
@@ -588,10 +684,85 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
   <div class="nav-page nav-page-next">
       <a href="./lesson02.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Excel vs.&nbsp;R and why we should care</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">R as a tool</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
-</nav>
+</nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Introduction  </span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">## What is programming? </span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">### Programming {.unnumbered}</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>Computer programming is the process of **writing code** to facilitate actions in a computer, application, or software program, and instructs them on how to perform. </span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>Each 'type' of programming comes with it's own language. </span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>A **programming language** is a vocabulary and set of grammatical rules for instructing a computer or computing device to perform specific tasks. </span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>Examples of programming languages include, but are not limited to , C, C++, Java, Python, and of course, **R**. </span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>The **purpose** of programming is to find a sequence of instructions that will automate the performance of a task on a computer. </span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="fu">### What is R? {.unnumbered}</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>At it's root, R is a language and environment for statistical computing and graphic building. </span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>R provides a variety of statistical (*liner and nonlinear modeling, classical statistical tests, time series analysis, classification, etc.*) and graphical techniques (*Base R, ggplot, etc.*). </span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>This software **excels** in it's ease of producing publication-ready high-quality plots, use of mathematical symbols, implementation of equations and formulas, and much more. </span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>Along with this, R is also a free, open-source software available on a wide variety of platforms, including both **Windows and MacOS**. </span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="fu">## Getting started with R</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="fu">### Downloading R{.unnumbered}</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">How to download R, by Garrett Grolemund</span><span class="co">](https://rstudio-education.github.io/hopr/starting.html)</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="fu">### R vs RStudio{.unnumbered}</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>**R** the application is installed on your computer and uses your personal computer resources to process R programming languages.</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>**RStudio** integrates with R as an IDE (Integrated Development Environment) to provide further functionality. </span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>To reiterate, RStudio acts as a *housing* of sorts to allow for the functionality and script writing of R.</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>Think of saving photos to iCloud. </span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>Without a device, your photos would be free-floating and rather inaccessible.</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>*BUT*, with a device (housing), you are able to access these photos. </span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>**RStudio** acts similarly with R in that it provides an environment to use the software. </span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>There are other text editors and IDEs that are available, **but we recommend starting with RStudio.** RStudio helps you use the version of R on your computer, but it does not come with it's own version of R.  </span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a><span class="fu">## The big four</span></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a><span class="fu">### Components of RStudio {.unnumbered}</span></span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a><span class="al">![A screenshot of my RStudio](r screenshot.png)</span></span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a><span class="fu">##### RStudio is divided into four panes {.unnumbered}</span></span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>The Script (top-left)</span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>The R Console (bottom-left)</span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>You Global Environment (top-right)</span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Your Files/Plots/Packages/Help/Viewer (bottom-right)</span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a><span class="fu">#### The Script {.unnumbered}</span></span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>The section is where your written code will go. </span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>Whenever you are giving R commands to complete, this text will be entered in the script. </span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>Along with this, the Script is where any open R files will be housed. </span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>This allows you to navigate between scripts with ease. </span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a><span class="al">![A screenshot of my Script](r script.png)</span></span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a><span class="fu">#### The R Console {.unnumbered}</span></span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a>This section is where your outputs will be printed. </span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a>Whenever you run a line in the script, the console will produce an output, or an error message if the line was unable to be run. </span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a>As you can see in the picture below, the console's output is both the line I ran, paired with the respective output. </span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a><span class="al">![A screenshot of my Conolse. This is what an my ran script output looks like.](r console.png)</span></span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a><span class="fu">#### The Global Environment</span></span>
+<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a>This pane is where any of your imported or created objects will go. </span>
+<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a>These could include, but are not limited to, data sets, functions, vectors, values, etc.</span>
+<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a>If you wish to view your full data set, you can click on the the object. If you wish to view the the column and row names, but not view the full object, you can select the blue and white arrow on the left-hand side of the object name. </span>
+<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a><span class="al">![Global Environment](r env.png)</span></span>
+<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Your Files/Plots/Packages/Help/Viewer {.unnumbered}</span></span>
+<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a>This pane of RStudio is where a lot of information can be found. You can navigate your computers files, view the plots you've developed, install packages, and find helpful information and examples within an easy-to-use search bar. </span>
+<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a><span class="al">![A screenshot of my Files and such](r files.png)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></div></div></div></div>
 </div> <!-- /content -->
 
 

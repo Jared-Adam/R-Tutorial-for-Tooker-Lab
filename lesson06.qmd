@@ -1,9 +1,4 @@
----
-code-block-bg: true
-code-block-border-left: "#1abcd9"
-highlight-style: atom-one 
----
-# : Coding etiquette
+# Coding etiquette
 ## How to write code that is clean, clear, and reproducible 
 ### Style {.unnumbered}
 Coding, like any other writing type, is dependent upon clear and consistent style. 
@@ -15,7 +10,8 @@ It is important to remember that R **cannot** handle spaces between words.
 Because of this, we must be creative in how we name things.
 It is a good idea to follow the **BigCamelCase** naming method. 
 Let's start by naming a vector 
-````{r}
+
+```{r}
 #GOOD
 MyNewVector <-c(1,2,3,4,5,6)
 
@@ -26,7 +22,8 @@ mynewvector <- c(7,8,9,10,11,12)
 While in this example it is fairly easy to read both, we see how the name following the **BigCamelCase** format is easier to follow.
 
 Let's look at another example of naming, this time getting more specific with our vector name. 
-````{r}
+
+```{r}
 #GOOD
 SlugDensityData_Spring2023 <- c(1,3,5,7)
 
@@ -47,7 +44,8 @@ Along with this, if we wish to share this code with anyone, they too must be abl
 The habit of good code annotation is one that should be adopted immediately and practiced throughout the duration of your programming days. 
 
 Let's look at some examples of both good, and bad annotations. 
-````{r}
+
+```{r}
 #| output: false
 #GOOD
 ##
@@ -60,12 +58,14 @@ mean(PracticeVector)
 #This works. I will leave this code here to reference in the future
 ##
 ```
-````{r}
+
+```{r}
 #| output: false
 #BAD
 practicevector <- c(11,2,3,4,5,11,2)
 mean(practicevector)
-````
+```
+
 While these examples are very simple in their nature, we can imagine how scrolling through 500+ lines of un-annotated code can be a nightmare. 
 Along with this, to reiterate my naming point, we can see how with poor naming practices and a lack of annotation, the bad example is doubly hard to follow.
 
@@ -75,8 +75,9 @@ When Monday rolls around, you open your R script up and have completely forgotte
 
 With proper annotation, this hiccup can be avoided. 
 
-Let's take a look at some examples. 
-````{r}
+Let's take a look at some examples.
+
+```{r}
 #| output: false
 #GOOD
 ## 
@@ -90,11 +91,11 @@ bugs <- data.frame( #naming this 'bugs' and using the data.frame function to bui
 )
 ##
 ```
+
 In this example, I clearly noted what I was doing and why I was doing it. For my sake, I can return to this easily. 
 If someone else was to come upon this, they too would be able to understand what my process was. 
 
-
-````{r}
+```{r}
 #| output: false
 #BAD
 notbugs <- data.frame(
@@ -103,6 +104,5 @@ notbugs <- data.frame(
   elderberry = rnorm(2000)
 )
 ```
-In this example, it is unclear what the purpose of this data set is. Along with that, if someone is not familiar with this script, they may find it very challenging to follow. 
 
-
+In this example, it is unclear what the purpose of this data set is. Along with that, if someone is not familiar with this script, they may find it very challenging to follow.

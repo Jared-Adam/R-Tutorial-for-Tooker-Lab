@@ -4,19 +4,19 @@ To begin, we must first open a new project.
 
 1. To open a new project, you first select the RStudio app on your computer. Unless immediately prompted, select *New Project* under the *File* tab. 
 
-![](drop down.png){fig-align="center"}
+![](figs/drop down.png){fig-align="center"}
 
 2. Next you will be prompted select which Directory type. Select *New Directory*. 
 
-![](startnewproj.png){fig-align="center"}
+![](figs/startnewproj.png){fig-align="center"}
 
 3. Next, in the *Project Type* screen, you will select *New Project*. 
 
-![](newproj.png){fig-align="center"}
+![](figs/newproj.png){fig-align="center"}
 
 4. Once selected, you will be prompted to name the Directory. Make this name unique and choose where you would like it to be saved. 
 
-![](new.proj.name.png){fig-align="center"}
+![](figs/new.proj.name.png){fig-align="center"}
 
 ## R-compatible data sets 
 When importing a data set from excel into R, the file type must be a **.csv**, rather than the typical **.xlsx**.
@@ -58,7 +58,7 @@ The second method for setting your working directory is done through the *Sessio
 You will then hover over *Set Working Directory* and then select *Choose Directory...*
 From here, you will navigate to the folder you wish to pull data from. 
 
-![Setting my working directory](directory.png)
+![Setting my working directory](figs/directory.png)
 
 Now that we have our working directory set, we can take a look into the folder. 
 

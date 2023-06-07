@@ -34,7 +34,7 @@ What were to happen if an **error was missed** after formula was run and you con
 This could mean big trouble when it came time for a real analysis. 
 Personally, that sounds like a **nightmare.** 
 
-![](excelex.png){fig-align="center"}
+![](figs/excelex.png){fig-align="center"}
 
 Now that I got that off my chest. Let's chat about R. 
 Within R are some great options for viewing our data.
@@ -45,19 +45,19 @@ Here are some examples of these functions.
 
 The structure (**str**) to view the nature of our data set.
 
-![](str.png)
+![](figs/str.png)
 
 The **head** function to view the first several rows of a data set.
 
-![](head.png)
+![](figs/head.png)
 
 The **tail** function to view the last several rows of our data set. 
 
-![](tail.png)
+![](figs/tail.png)
 
 The **colnames** function to view the names of our columns.
 
-![](colnames.png)
+![](figs/colnames.png)
 
 As we are starting to see, when compared to Excel with examples of only viewing data, R is beginning to appear more versatile. 
 We will continue to build on the capabilities of R in future sections and work through functions, etiquette, data wrangling, plotting, and much more. 

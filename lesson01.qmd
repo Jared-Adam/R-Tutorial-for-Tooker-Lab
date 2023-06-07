@@ -35,7 +35,7 @@ There are other text editors and IDEs that are available, **but we recommend sta
 ## The big four
 ### Components of RStudio {.unnumbered}
 
-![A screenshot of my RStudio](r screenshot.png)
+![A screenshot of my RStudio](figs/r screenshot.png)
 
 ##### RStudio is divided into four panes {.unnumbered}
 
@@ -51,25 +51,25 @@ Whenever you are giving R commands to complete, this text will be entered in the
 Along with this, the Script is where any open R files will be housed. 
 This allows you to navigate between scripts with ease. 
 
-![A screenshot of my Script](r script.png)
+![A screenshot of my Script](figs/r script.png)
 
 #### The R Console {.unnumbered}
 This section is where your outputs will be printed. 
 Whenever you run a line in the script, the console will produce an output, or an error message if the line was unable to be run. 
 As you can see in the picture below, the console's output is both the line I ran, paired with the respective output. 
 
-![A screenshot of my Conolse. This is what an my ran script output looks like.](r console.png)
+![A screenshot of my Conolse. This is what an my ran script output looks like.](figs/r console.png)
 
 #### The Global Environment
 This pane is where any of your imported or created objects will go. 
 These could include, but are not limited to, data sets, functions, vectors, values, etc.
 If you wish to view your full data set, you can click on the the object. If you wish to view the the column and row names, but not view the full object, you can select the blue and white arrow on the left-hand side of the object name. 
 
-![Global Environment](r env.png)
+![Global Environment](figs/r env.png)
 
 
 #### Your Files/Plots/Packages/Help/Viewer {.unnumbered}
 This pane of RStudio is where a lot of information can be found. You can navigate your computers files, view the plots you've developed, install packages, and find helpful information and examples within an easy-to-use search bar. 
 
-![A screenshot of my Files and such](r files.png)
+![A screenshot of my Files and such](figs/r files.png)
 

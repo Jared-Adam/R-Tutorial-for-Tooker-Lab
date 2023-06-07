@@ -25,6 +25,7 @@ book:
         - resources.qmd
         - Glossary.qmd
     - references.qmd
+  downloads: pdf
 
 bibliography: references.bib
 

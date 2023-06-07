@@ -1,6 +1,4 @@
----
-draft: true
----
+
 
 # Lesson 08
 ## Sub heading

@@ -20,7 +20,7 @@ book:
     - part: "Buckle up"
       chapters: 
         - lesson07.qmd
-        - lesson08.qmd
+        #- lesson08.qmd
     - part: "Last part"
       chapters: 
         - resources.qmd

@@ -242,7 +242,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Glossary.html" class="sidebar-item-text sidebar-link">
+  <a href="./Endearment.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Terms of endearment</span></span></a>
   </div>
 </li>
@@ -290,8 +290,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Before we begin wrangling our data set, let’s quickly discuss why cleaning data in R is important. First and foremost, my Excel file never needs to change. Along with this, I only need to save it once. No saving a new copy every time I make a new column or want to write a formula.</p>
 <p>In this section, we will go over some important packages and key functions that will aid in the transition from Excel-based data wrangling to exclusively R-based data wangling. SO, without further ado, lettuce begin.</p>
 </section><section id="what-we-use-to-wrangle" class="level3 unnumbered"><h3 class="unnumbered anchored" data-anchor-id="what-we-use-to-wrangle">What we use to wrangle</h3>
-<p>When we wrangle our data sets, there is one ‘umbrella’ package I find to me the most versatile. This is <strong>tidyverse</strong>. <strong>Tidyverse</strong> houses many useful packages for data manipulation, but in this section I will only be referring to one. This package is the <strong>dplyr</strong> package. While I rely on these packages a lot, I also use functions pre-installed in Base R while wrangling.</p>
-<p>Please see the cheat sheets (here) for both of these packages.</p>
+<p>When we wrangle our data sets, there is one ‘umbrella’ package I find to be the most versatile. This is <strong>tidyverse</strong>. <strong>Tidyverse</strong> houses many useful packages for data manipulation, but in this section I will only be referring to one. This package is <strong>dplyr</strong>. While I rely on these packages a lot, I also use functions pre-installed in Base R while wrangling.</p>
+<p>Please see the cheat sheets <a href="./resources.html">here</a> for both of these packages.</p>
 </section></section><section id="dplyr-examples" class="level2" data-number="7.2"><h2 data-number="7.2" class="anchored" data-anchor-id="dplyr-examples">
 <span class="header-section-number">7.2</span> dplyr Examples</h2>
 <p>Let’s start by installing the needed packages. Remember to remove the # symbol to install these packages. We will also call in our Palmer Penguins data set that you downloaded earlier.</p>
@@ -489,7 +489,7 @@ To resolve any missing values, we must first determine if there are any NAs, and
 # … with 323 more rows</code></pre>
 </div>
 </div>
-<p>Now, let’s say we want to see bill length in the same descending order, but we want order this by year. This is done with a very simple addition to our <em>arrange()</em> section. To accomplish this, we add the year variable first (remembering the the default for <strong>arrange</strong> is small-large) followed by the bill length command (which is the same as the previous example.)</p>
+<p>Now, let’s say we want to see bill length in the same descending order, but we want to order this by year. This is done with a very simple addition to our <em>arrange()</em> section. To accomplish this, we add the year variable first (remembering the the default for <strong>arrange</strong> is small-large) followed by the bill length command (which is the same as the previous example.)</p>
 <div class="cell">
 <div class="sourceCode" id="cb17"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># select() and arrange()</span></span>
 <span><span class="va">penguins</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
@@ -537,7 +537,7 @@ To resolve any missing values, we must first determine if there are any NAs, and
 # … with 93 more rows</code></pre>
 </div>
 </div>
-<p>What if I want to see within the year 2007, which penguins have bill lengths higher than the mean of them <em>all</em>? This can be accomplished by, again, adding an operator, but also calling another function. We will command R further with <strong>mean</strong> function from base R. Notice I am separating each line in the <strong>filter</strong> function with a comma. This allows me to add multiple commands within the same function.</p>
+<p>What if I want to see which penguins have bill lengths that are higher than the average length, but <em>only</em> from 2007? This can be accomplished by, again, adding an operator, but also calling another function. We will command R further with <strong>mean</strong> function from base R. Notice I am separating each line in the <strong>filter</strong> function with a comma. This allows me to add multiple commands within the same function.</p>
 <div class="cell">
 <div class="sourceCode" id="cb21"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># select(), filter(), and mean()</span></span>
 <span></span>
@@ -726,7 +726,7 @@ I want to know how many species I have to further filter this set. To accomplish
 </section></section><section id="practice-on-your-own" class="level2" data-number="7.3"><h2 data-number="7.3" class="anchored" data-anchor-id="practice-on-your-own">
 <span class="header-section-number">7.3</span> Practice on your own</h2>
 <p>Now that we have worked through some examples with Palmer Penguins, let’s try and work through a data set of our own.</p>
-<p>Attached here is a (<a href="https://pennstateoffice365-my.sharepoint.com/:x:/r/personal/jqa5357_psu_edu/Documents/Documents/Research/R/Intern%20Tutorial/excel/Slugs.xlsx?d=w34a2237a9fc24c799429b9f946597a3b&amp;csf=1&amp;web=1&amp;e=fSCzeR">Slug data set.</a>)</p>
+<p>Attached here is a (<a href="https://pennstateoffice365-my.sharepoint.com/:x:/g/personal/jqa5357_psu_edu/EXojojTCn3lMlCm5-UZZejsBFgoLjtoMTZZHwdtZKtd6bw?e=lId60J">Slug data set.</a></p>
 <p><strong>Remember</strong>, you will need to import this file into R in the correct format!</p>
 <p>Your task is to [1] input it into R, [2] investigate the variables and classes of these variables, [3] produce an output using <em>each</em> of the functions we just covered, [4] and at least <em>one</em> example where you use <strong>select, rename, arrange, filter, mutate, and group_by</strong> in the same command line. In part 3, for each change to the data set, save the changed data set as a new object. For part 4, save this object as, ‘Final_Changes’. If you conduct more than one iteration of part 4, add the associated number at the end of each name. For example, Final_Changes_1, Final_Changes_2, etc.</p>
 
@@ -1040,13 +1040,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb39-11"><a href="#cb39-11" aria-hidden="true" tabindex="-1"></a>SO, without further ado, lettuce begin. </span>
 <span id="cb39-12"><a href="#cb39-12" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb39-13"><a href="#cb39-13" aria-hidden="true" tabindex="-1"></a><span class="fu">### What we use to wrangle {.unnumbered}</span></span>
-<span id="cb39-14"><a href="#cb39-14" aria-hidden="true" tabindex="-1"></a>When we wrangle our data sets, there is one 'umbrella' package I find to me the most versatile. </span>
+<span id="cb39-14"><a href="#cb39-14" aria-hidden="true" tabindex="-1"></a>When we wrangle our data sets, there is one 'umbrella' package I find to be the most versatile. </span>
 <span id="cb39-15"><a href="#cb39-15" aria-hidden="true" tabindex="-1"></a>This is **tidyverse**.</span>
 <span id="cb39-16"><a href="#cb39-16" aria-hidden="true" tabindex="-1"></a>**Tidyverse** houses many useful packages for data manipulation, but in this section I will only be referring to one. </span>
-<span id="cb39-17"><a href="#cb39-17" aria-hidden="true" tabindex="-1"></a>This package is the **dplyr** package. </span>
+<span id="cb39-17"><a href="#cb39-17" aria-hidden="true" tabindex="-1"></a>This package is **dplyr**. </span>
 <span id="cb39-18"><a href="#cb39-18" aria-hidden="true" tabindex="-1"></a>While I rely on these packages a lot, I also use functions pre-installed in Base R while wrangling. </span>
 <span id="cb39-19"><a href="#cb39-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-20"><a href="#cb39-20" aria-hidden="true" tabindex="-1"></a>Please see the cheat sheets (here) for both of these packages.</span>
+<span id="cb39-20"><a href="#cb39-20" aria-hidden="true" tabindex="-1"></a>Please see the cheat sheets <span class="co">[</span><span class="ot">here</span><span class="co">](resources.qmd)</span> for both of these packages.</span>
 <span id="cb39-21"><a href="#cb39-21" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb39-22"><a href="#cb39-22" aria-hidden="true" tabindex="-1"></a><span class="fu">## dplyr Examples</span></span>
 <span id="cb39-23"><a href="#cb39-23" aria-hidden="true" tabindex="-1"></a></span>
@@ -1175,7 +1175,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb39-164"><a href="#cb39-164" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(bill_length_mm)) <span class="co">#using the desc() function to command the order from      largest to smallest </span></span>
 <span id="cb39-165"><a href="#cb39-165" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb39-166"><a href="#cb39-166" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-167"><a href="#cb39-167" aria-hidden="true" tabindex="-1"></a>Now, let's say we want to see bill length in the same descending order, but we want order this by year. </span>
+<span id="cb39-167"><a href="#cb39-167" aria-hidden="true" tabindex="-1"></a>Now, let's say we want to see bill length in the same descending order, but we want to order this by year. </span>
 <span id="cb39-168"><a href="#cb39-168" aria-hidden="true" tabindex="-1"></a>This is done with a very simple addition to our *arrange()* section. </span>
 <span id="cb39-169"><a href="#cb39-169" aria-hidden="true" tabindex="-1"></a>To accomplish this, we add the year variable first (remembering the the default for **arrange** is small-large) followed by the bill length command (which is the same as the previous example.)</span>
 <span id="cb39-170"><a href="#cb39-170" aria-hidden="true" tabindex="-1"></a></span>
@@ -1200,7 +1200,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb39-193"><a href="#cb39-193" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(year <span class="sc">==</span> <span class="dv">2007</span>) <span class="co">#using the '==' operator to show everything with the year 2007</span></span>
 <span id="cb39-194"><a href="#cb39-194" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb39-195"><a href="#cb39-195" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-196"><a href="#cb39-196" aria-hidden="true" tabindex="-1"></a>What if I want to see within the year 2007, which penguins have bill lengths higher than the mean of them *all*?</span>
+<span id="cb39-196"><a href="#cb39-196" aria-hidden="true" tabindex="-1"></a>What if I want to see which penguins have bill lengths that are higher than the average length, but *only* from 2007?</span>
 <span id="cb39-197"><a href="#cb39-197" aria-hidden="true" tabindex="-1"></a>This can be accomplished by, again, adding an operator, but also calling another function. </span>
 <span id="cb39-198"><a href="#cb39-198" aria-hidden="true" tabindex="-1"></a>We will command R further with **mean** function from base R. </span>
 <span id="cb39-199"><a href="#cb39-199" aria-hidden="true" tabindex="-1"></a>Notice I am separating each line in the **filter** function with a comma. </span>
@@ -1341,7 +1341,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb39-350"><a href="#cb39-350" aria-hidden="true" tabindex="-1"></a>Now that we have worked through some examples with Palmer Penguins, let's try and work through a data set of our own. </span>
 <span id="cb39-351"><a href="#cb39-351" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb39-352"><a href="#cb39-352" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-353"><a href="#cb39-353" aria-hidden="true" tabindex="-1"></a>Attached here is a (<span class="co">[</span><span class="ot">Slug data set.</span><span class="co">](https://pennstateoffice365-my.sharepoint.com/:x:/r/personal/jqa5357_psu_edu/Documents/Documents/Research/R/Intern%20Tutorial/excel/Slugs.xlsx?d=w34a2237a9fc24c799429b9f946597a3b&amp;csf=1&amp;web=1&amp;e=fSCzeR)</span>)</span>
+<span id="cb39-353"><a href="#cb39-353" aria-hidden="true" tabindex="-1"></a>Attached here is a (<span class="co">[</span><span class="ot">Slug data set.</span><span class="co">](https://pennstateoffice365-my.sharepoint.com/:x:/g/personal/jqa5357_psu_edu/EXojojTCn3lMlCm5-UZZejsBFgoLjtoMTZZHwdtZKtd6bw?e=lId60J)</span></span>
 <span id="cb39-354"><a href="#cb39-354" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb39-355"><a href="#cb39-355" aria-hidden="true" tabindex="-1"></a>**Remember**, you will need to import this file into R in the correct format!</span>
 <span id="cb39-356"><a href="#cb39-356" aria-hidden="true" tabindex="-1"></a></span>

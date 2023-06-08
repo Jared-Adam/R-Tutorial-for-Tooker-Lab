@@ -11,13 +11,13 @@ In this section, we will go over some important packages and key functions that 
 SO, without further ado, lettuce begin. 
 
 ### What we use to wrangle {.unnumbered}
-When we wrangle our data sets, there is one 'umbrella' package I find to me the most versatile. 
+When we wrangle our data sets, there is one 'umbrella' package I find to be the most versatile. 
 This is **tidyverse**.
 **Tidyverse** houses many useful packages for data manipulation, but in this section I will only be referring to one. 
-This package is the **dplyr** package. 
+This package is **dplyr**. 
 While I rely on these packages a lot, I also use functions pre-installed in Base R while wrangling. 
 
-Please see the cheat sheets (here) for both of these packages.
+Please see the cheat sheets [here](resources.qmd) for both of these packages.
 
 ## dplyr Examples
 
@@ -146,7 +146,7 @@ penguins %>%
   arrange(desc(bill_length_mm)) #using the desc() function to command the order from      largest to smallest 
 ```
 
-Now, let's say we want to see bill length in the same descending order, but we want order this by year. 
+Now, let's say we want to see bill length in the same descending order, but we want to order this by year. 
 This is done with a very simple addition to our *arrange()* section. 
 To accomplish this, we add the year variable first (remembering the the default for **arrange** is small-large) followed by the bill length command (which is the same as the previous example.)
 
@@ -171,7 +171,7 @@ penguins %>%
   filter(year == 2007) #using the '==' operator to show everything with the year 2007
 ```
 
-What if I want to see within the year 2007, which penguins have bill lengths higher than the mean of them *all*?
+What if I want to see which penguins have bill lengths that are higher than the average length, but *only* from 2007?
 This can be accomplished by, again, adding an operator, but also calling another function. 
 We will command R further with **mean** function from base R. 
 Notice I am separating each line in the **filter** function with a comma. 
@@ -313,7 +313,7 @@ penguins %>%
 Now that we have worked through some examples with Palmer Penguins, let's try and work through a data set of our own. 
 
 
-Attached here is a ([Slug data set.](https://pennstateoffice365-my.sharepoint.com/:x:/r/personal/jqa5357_psu_edu/Documents/Documents/Research/R/Intern%20Tutorial/excel/Slugs.xlsx?d=w34a2237a9fc24c799429b9f946597a3b&csf=1&web=1&e=fSCzeR))
+Attached here is a ([Slug data set.](https://pennstateoffice365-my.sharepoint.com/:x:/g/personal/jqa5357_psu_edu/EXojojTCn3lMlCm5-UZZejsBFgoLjtoMTZZHwdtZKtd6bw?e=lId60J)
 
 **Remember**, you will need to import this file into R in the correct format!
 

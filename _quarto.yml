@@ -24,7 +24,7 @@ book:
     - part: "Last part"
       chapters: 
         - resources.qmd
-        - Glossary.qmd
+        - Endearment.qmd
     - references.qmd
   downloads: pdf
 

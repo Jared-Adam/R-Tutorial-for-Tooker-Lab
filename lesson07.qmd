@@ -15,10 +15,9 @@ When we wrangle our data sets, there is one 'umbrella' package I find to be the 
 This is **tidyverse**.
 **Tidyverse** houses many useful packages for data manipulation, but in this section I will only be referring to one. 
 This package is **dplyr**. 
-While I rely on these packages a lot, I also use functions pre-installed in Base R while wrangling. 
+While I rely on this package a lot, I also use functions pre-installed in Base R while wrangling. 
 
-Please see the cheat sheets [here](resources.qmd) for both of these packages.
-
+Please see the wrangling cheat sheets [here](resources.qmd).
 ## dplyr Examples
 
 
@@ -36,13 +35,13 @@ library(palmerpenguins)
 data(package = 'palmerpenguins')
 ```
 
-### NAs in R
+### NAs in R {.unnumbered}
 Before we begin, we must first check for missing values.
 R *does not* love when NAs get thrown into the mix, especially when running numerical commands, like the **mean** function.  
 To resolve any missing values, we must first determine if there are any NAs, and where they may be. 
 
 First, we will look to see IF and WHERE potential NAs are in our data set.
-We will do this by using the **which** function, followed by the **is.na** function within out penguins data set. 
+We will do this by using the **which** function, followed by the **is.na** function within our penguins data set. 
 What these two functions do together is which locates all of the columns where NAs are present, based on the **is.na** function. 
 If we wanted to find all of the columns where there were no NAs, we could simply change **is.na** to **!is.na**.
 

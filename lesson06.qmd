@@ -9,7 +9,7 @@ The same goes for coding.
 It is important to remember that R **cannot** handle spaces between words. 
 Because of this, we must be creative in how we name things.
 It is a good idea to follow the **BigCamelCase** naming method. 
-Let's start by naming a vector 
+Let's start by naming a vector. 
 
 ```{r}
 #GOOD

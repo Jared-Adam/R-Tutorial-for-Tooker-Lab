@@ -1,0 +1,104 @@
+---
+author: Assignment, Dr. Sara Hermann. Code, Jared Adam
+execute: 
+  echo: false
+---
+
+# Testing your skills: ggplot 
+## Recreate these plots to the best of your ability {.unnumbered}
+
+In this section, we will be using the **mtcars** data set. 
+Let's start by reading in **ggplot** and the **mtcars** data set. 
+
+```{r}
+#| echo: true
+#| output: false
+library(ggplot2)
+data("mtcars")
+```
+
+For more information about this data set, look in the *help* section. 
+```{r}
+#| echo: true
+#| output: false
+?mtcars()
+```
+
+Now, let's take a look a little closer at the data set. 
+Which 'class' do these variables belong to? 
+Are they numeric? Characters? Integers? 
+
+This knowledge is very impoartant when building your plots.
+
+```{r}
+#| echo: true
+#| output: false
+
+View(mtcars)
+str(mtcars)
+```
+
+### Hints {.unnumbered}
+
+Here is an example of how to change the variable type inside of the ggplot lines **and** outside. 
+Notice here, we are calling the *am* column with the **$** operator. 
+
+```{r}
+#| output: false
+#| echo: true
+ggplot(mtcars, aes(x = as.factor(am)))
+
+mtcars$am <- as.factor(mtcars$am)
+```
+
+You may also need to search for ggplot format help on these. 
+Please see the extra resources at the bottom of this page. 
+
+### Plot time {.unnumbered}
+
+#### Graph 1: geom_point {.unnumbered}
+
+```{r}
+#| warning: false
+#| 
+
+ggplot(data=mtcars, aes(x=wt, y=mpg))+
+  geom_point(color="blue", shape=15) + #changing data to blue squares with shape=15
+  stat_smooth(method=lm, se=TRUE, color="black")+ #changing line to black 
+  labs(x = "Weight (1000 lbs)",#axis titles 
+  y = "Miles/(US) gallon")+
+  theme(axis.text = element_text(size=8), #changing the font sizes of axis
+        axis.title.x = element_text(size=10),#changing the font sizes of axis titles
+        axis.title.y = element_text(size=10))
+```
+
+#### Graph 2: geom_boxplot {.unnumbered}
+
+```{r}
+#| warning: false
+mtcars$am = as.factor(mtcars$am)
+is.factor = mtcars$am
+levels(mtcars$am)
+am_labels = factor(mtcars$am, labels=c("Automatic", "Manual"))
+
+ggplot(data=mtcars, aes(x=disp, y=am_labels, fill=factor(gear)))+
+  geom_boxplot(fatten=2.5)+ #making the median line wider (fatter) because the one in the picture looks bigger
+  theme( 
+  panel.grid.major = element_line(size = 0.5, linetype = "solid", color = "grey"),#major lines = grey 
+  panel.grid.minor = element_line(size = 0.5, linetype = "solid", color = "grey"),#minor lines = grey 
+  panel.background = element_rect(fill = "white", color = "black", size = 0.5, linetype = 'solid'))+ #backgroun =white, border = black 
+  scale_x_continuous(name="Displacement (cu.in.)",limits = c(50,max(mtcars$disp)))+ #axis names and legend label
+  scale_y_discrete(name="Transmission")+
+  labs(fill="Number of forward gears")
+```  
+
+
+#### More to come!! 6/9/2023 {.unnumbered}
+
+### Additional resources {.unnumbered}
+
+[Lecture notes](https://www.jeffdoser.com/files/for875/_book/ggplot2.html)
+
+[Basic R graphics guide](https://www.jeffdoser.com/files/for875/_book/graphics.html)
+
+[ggplot online textbook](https://github.com/hadley/ggplot2-book)

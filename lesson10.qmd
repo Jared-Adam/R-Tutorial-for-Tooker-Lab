@@ -1,0 +1,35 @@
+# Many Models
+## Copy paste 
+When writing code for anything. 
+Be it models building, summary stats, sub-setting, or whatever, I try to hold myself accountable to one rule. 
+It I copy and paste a command more than 3-4 times, I either build a loop, or write a function. 
+
+But would it not be faster to just copy and paste everything rather than learning how to build the modulation? Yes, it most definitely *may* be faster, but it is also an unsafe practice. 
+
+Let's look at an example of copy paste for sub-setting. 
+
+In this example, we have a data set of spider counts from two seasons (spring and fall) in **nine** different locations. 
+The goal here is to subset each of these seasons and state. 
+What this turned into was 16 lines of code where I had to change the... I need more here. 
+```{r}
+
+pa.sprslugs = subset(spring.slugs2, location == "PA")
+pa.falslugs = subset(fall.slugs2, location == "PA")
+wi.sprslugs = subset(spring.slugs2, location == "WI")
+wi.falslugs = subset(fall.slugs2, location == "WI")
+ky.sprslugs = subset(spring.slugs2, location == "KY")
+ky.falslugs = subset(fall.slugs2, location == "KY")
+de.sprslugs = subset(spring.slugs2, location == "DE")
+de.falslugs = subset(fall.slugs2, location == "DE")
+il.sprslugs = subset(spring.slugs2, location == "IL")
+il.falslugs = subset(fall.slugs2, location == "IL")
+md.sprslugs = subset(spring.slugs2, location == "MD")
+md.falslugs = subset(fall.slugs2, location == "MD")
+ny.sprslugs = subset(spring.slugs2, location == "NY")
+ny.falslugs = subset(fall.slugs2, location == "NY")
+oh.sprslugs = subset(spring.slugs2, location == "OH")
+oh.falslugs = subset(fall.slugs2, location == "OH")
+vt.sprslugs = subset(spring.slugs2, location == "VT")
+vt.falslugs = subset(fall.slugs2, location == "VT")
+
+```

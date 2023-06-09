@@ -1,7 +1,25 @@
+# GGPLOT
+## What in the world is a ggplot? 
+### ggplot package {.unnumbered}
+**Ggplot** is another member of the **tidyverse** 'umbrella'. 
+Ggplot an incredibly popular data visualization tool which comes with many built in functions. 
+Along with these functions, there are quite a few extension packages that can be used in complement of our ggplot plot functions. 
+Some examples of these include **ggforce**, which is used to provide some missing functionality in ggplot, and **ggrepel** which, in short, assists in making in-plot labels easier to read. 
 
+Attached [here](https://exts.ggplot2.tidyverse.org/ggrepel.html) is a link to the list of ggplot extensions on the tidyverse site. 
 
-# Lesson 08
-## Sub heading
+### Why visualization of our data is so important {.unnumbered}
+Having the data is not enough. We *must* present them in a compelling way. 
+At the end of the day, if our data visualization is not clean and understandable, we have failed. 
+To tell the *full* story of our data, it is imperative that our plots be *clean*, *elegant*, and most importantly, *simple.* 
 
+NOT DONE
 
-# Section
+### First things first, *syntax* {.unnumbered}
+
+Should also talk about which type of data is good for each plot ~type 
+
+## Working through some examples
+
+Different ggplot options here (geom_point, geom_bar, etc.)
+

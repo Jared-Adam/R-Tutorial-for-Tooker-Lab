@@ -20,7 +20,10 @@ book:
     - part: "Buckle up"
       chapters: 
         - lesson07.qmd
+    - part: "Plotting along: IN BETA"
+      chapters: 
         #- lesson08.qmd
+        - lesson09.qmd 
     - part: "Last part"
       chapters: 
         - resources.qmd

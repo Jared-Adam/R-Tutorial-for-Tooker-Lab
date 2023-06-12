@@ -286,28 +286,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    
   <ul>
 <li>
-<a href="#background-of-the-operators" id="toc-background-of-the-operators" class="nav-link active" data-scroll-target="#background-of-the-operators"><span class="header-section-number">6</span> Background of the operators</a>
+<a href="#background-of-the-operators" id="toc-background-of-the-operators" class="nav-link active" data-scroll-target="#background-of-the-operators"><span class="header-section-number">5.1</span> Background of the operators</a>
   <ul class="collapse">
 <li><a href="#the-dollar-sign" id="toc-the-dollar-sign" class="nav-link" data-scroll-target="#the-dollar-sign">The dollar sign: <code>$</code></a></li>
   <li><a href="#single-dimension-square-bois" id="toc-single-dimension-square-bois" class="nav-link" data-scroll-target="#single-dimension-square-bois">Single dimension square bois: <code>[]</code></a></li>
   <li><a href="#multiple-dimension-square-bois" id="toc-multiple-dimension-square-bois" class="nav-link" data-scroll-target="#multiple-dimension-square-bois">Multiple dimension square bois: <code>[]</code></a></li>
-  <li>
-<a href="#last-but-not-least-the-pipe" id="toc-last-but-not-least-the-pipe" class="nav-link" data-scroll-target="#last-but-not-least-the-pipe">Last but not least, the pipe: <code>%&gt;%</code></a>
-  <ul class="collapse">
-<li><a href="#the-results-explained" id="toc-the-results-explained" class="nav-link" data-scroll-target="#the-results-explained">The results, explained</a></li>
-  </ul>
-</li>
+  <li><a href="#last-but-not-least-the-pipe" id="toc-last-but-not-least-the-pipe" class="nav-link" data-scroll-target="#last-but-not-least-the-pipe">Last but not least, the pipe: <code>%&gt;%</code></a></li>
+  <li><a href="#the-results-explained" id="toc-the-results-explained" class="nav-link" data-scroll-target="#the-results-explained">The results, explained</a></li>
   </ul>
 </li>
   </ul></nav>
     </div>
 <!-- main -->
-<main class="content quarto-banner-title-block" id="quarto-document-content"><section id="background-of-the-operators" class="level1" data-number="6"><h1 data-number="6">
-<span class="header-section-number">6</span> Background of the operators</h1>
+<main class="content quarto-banner-title-block" id="quarto-document-content"><section id="background-of-the-operators" class="level2" data-number="5.1"><h2 data-number="5.1" class="anchored" data-anchor-id="background-of-the-operators">
+<span class="header-section-number">5.1</span> Background of the operators</h2>
 <p>When calling specific variable, list, or object in R, there are three main ways. These include the <code>$</code> operator, the <code>[]</code> (bracket), and the <code>%&gt;%</code> (pipe) operator. These operators work in similar ways in that they allow you to access specific <em>pieces</em> of your data frame.</p>
 <p>In this section we will investigate all three.</p>
-<section id="the-dollar-sign" class="level2 unnumbered"><h2 class="unnumbered anchored" data-anchor-id="the-dollar-sign">The dollar sign: <code>$</code>
-</h2>
+<section id="the-dollar-sign" class="level3 unnumbered"><h3 class="unnumbered anchored" data-anchor-id="the-dollar-sign">The dollar sign: <code>$</code>
+</h3>
 <p>This operator is used in R to access the list of a data frame. You can use this operator to access variables, add values or objects, update (e.g., change a class), and delete variables from a data frame.</p>
 <p>Let’s start by creating a data frame.</p>
 <div class="cell">
@@ -369,8 +365,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>Notice here, the new object <strong>only</strong> houses the values from the <em>score</em> column.</p>
-</section><section id="single-dimension-square-bois" class="level2 unnumbered"><h2 class="unnumbered anchored" data-anchor-id="single-dimension-square-bois">Single dimension square bois: <code>[]</code>
-</h2>
+</section><section id="single-dimension-square-bois" class="level3 unnumbered"><h3 class="unnumbered anchored" data-anchor-id="single-dimension-square-bois">Single dimension square bois: <code>[]</code>
+</h3>
 <p>Brackets <code>[]</code>, in R, work similarly to that of the dollar sign (<code>$</code>). Brackets are especially useful when we want to extract single elements from an object. Let’s start by creating a simple, single dimension vector.</p>
 <div class="cell">
 <div class="sourceCode" id="cb10"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">#ceating a numeric vector</span></span>
@@ -409,8 +405,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span></span>
 <span><span class="va">Vector_One</span><span class="op">[</span><span class="va">Vector_One</span> <span class="op">!=</span> <span class="fl">2</span><span class="op">]</span> <span class="co">#extracting values that do not equal 2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</section><section id="multiple-dimension-square-bois" class="level2 unnumbered"><h2 class="unnumbered anchored" data-anchor-id="multiple-dimension-square-bois">Multiple dimension square bois: <code>[]</code>
-</h2>
+</section><section id="multiple-dimension-square-bois" class="level3 unnumbered"><h3 class="unnumbered anchored" data-anchor-id="multiple-dimension-square-bois">Multiple dimension square bois: <code>[]</code>
+</h3>
 <p>Now that we can see how to use the brackets when looking for single objects (like a simple vector), let’s start to look at the use of brackets with an increase in dimensions. Multiple dimensions come into play when we are investigating a full data frame or matrix. In this section, we will be looking at the Sample_DF data frame we created above.</p>
 <p>Within the bracket are assigned values. By this, I mean, depending on the <em>location</em> of the number within the bracket, the location that information is pulled from will change. The assigned locations are <strong>[row, column]</strong></p>
 <p>For example, if we were to run <strong>[1,2]</strong>, our output would be the value in the <em>first</em> row and <em>second</em> column.</p>
@@ -457,8 +453,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>Our output shows us all of the values within the <em>insect</em> column.</p>
-</section><section id="last-but-not-least-the-pipe" class="level2 unnumbered"><h2 class="unnumbered anchored" data-anchor-id="last-but-not-least-the-pipe">Last but not least, the pipe: <code>%&gt;%</code>
-</h2>
+</section><section id="last-but-not-least-the-pipe" class="level3 unnumbered"><h3 class="unnumbered anchored" data-anchor-id="last-but-not-least-the-pipe">Last but not least, the pipe: <code>%&gt;%</code>
+</h3>
 <p>For the sake of not working too far ahead, I will not include many examples here. In the <a href="./lesson07.html">data wrangling</a> section, I will be <em>exclusively</em> using the pipe operator. Please see that section for working examples of the pipe operator.</p>
 <p>SO. We have investigated, and worked through, the dollar sign operator and brackets for pulling out specific elements. These methods are certainly effective, but as we start to work through larger data sets of raw data, there may be many changes we need to apply.</p>
 <p>To accomplish this, we could write out a new command line for each iteration, OR, we can ‘pipe’ several commands into one operation. This processing of piping <em>links</em> all of our changes to one command, allowing for efficiency and easy error-tracking. To reiterate, this task is the <em>chaining</em> of arguments into one command.</p>
@@ -516,7 +512,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p><strong>We got the same output! </strong> As we can see, this method is both cleaner (regarding your environment and saving objects over and over) and safer (with regard to errors) than the sequential example.</p>
-<section id="the-results-explained" class="level3 unnumbered"><h3 class="unnumbered anchored" data-anchor-id="the-results-explained">The results, explained</h3>
+</section><section id="the-results-explained" class="level3 unnumbered"><h3 class="unnumbered anchored" data-anchor-id="the-results-explained">The results, explained</h3>
 <p>Continuing to follow Rory’s brilliant synthesis of this operator, I will use their example here. Let’s think of <code>%&gt;%</code> as the word ‘<em>then</em>’.</p>
 <p>Let’s now write out the same piping example.</p>
 <ul>
@@ -534,7 +530,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <!-- -->
 
-</section></section></section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+</section></section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -829,14 +825,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
 <div class="sourceCode" id="cb36" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Several methods for calling different variables</span></span>
-<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a><span class="fu"># Background of the operators</span></span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a><span class="fu">## Background of the operators</span></span>
 <span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a>When calling specific variable, list, or object in R, there are three main ways. </span>
 <span id="cb36-4"><a href="#cb36-4" aria-hidden="true" tabindex="-1"></a>These include the <span class="in">`$`</span> operator, the <span class="in">`[]`</span> (bracket), and the <span class="in">`%&gt;%`</span> (pipe) operator. </span>
 <span id="cb36-5"><a href="#cb36-5" aria-hidden="true" tabindex="-1"></a>These operators work in similar ways in that they allow you to access specific *pieces* of your data frame. </span>
 <span id="cb36-6"><a href="#cb36-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb36-7"><a href="#cb36-7" aria-hidden="true" tabindex="-1"></a>In this section we will investigate all three. </span>
 <span id="cb36-8"><a href="#cb36-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb36-9"><a href="#cb36-9" aria-hidden="true" tabindex="-1"></a><span class="fu">## The dollar sign: `$` {.unnumbered}</span></span>
+<span id="cb36-9"><a href="#cb36-9" aria-hidden="true" tabindex="-1"></a><span class="fu">### The dollar sign: `$` {.unnumbered}</span></span>
 <span id="cb36-10"><a href="#cb36-10" aria-hidden="true" tabindex="-1"></a>This operator is used in R to access the list of a data frame. You can use this operator to access variables, add values or objects, update (e.g., change a class), and delete variables from a data frame.</span>
 <span id="cb36-11"><a href="#cb36-11" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb36-12"><a href="#cb36-12" aria-hidden="true" tabindex="-1"></a>Let's start by creating a data frame. </span>
@@ -905,7 +901,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb36-85"><a href="#cb36-85" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb36-86"><a href="#cb36-86" aria-hidden="true" tabindex="-1"></a>Notice here, the new object **only** houses the values from the *score* column. </span>
 <span id="cb36-87"><a href="#cb36-87" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb36-88"><a href="#cb36-88" aria-hidden="true" tabindex="-1"></a><span class="fu">## Single dimension square bois: `[]` {.unnumbered}</span></span>
+<span id="cb36-88"><a href="#cb36-88" aria-hidden="true" tabindex="-1"></a><span class="fu">### Single dimension square bois: `[]` {.unnumbered}</span></span>
 <span id="cb36-89"><a href="#cb36-89" aria-hidden="true" tabindex="-1"></a>Brackets <span class="in">`[]`</span>, in R, work similarly to that of the dollar sign (<span class="in">`$`</span>).</span>
 <span id="cb36-90"><a href="#cb36-90" aria-hidden="true" tabindex="-1"></a>Brackets are especially useful when we want to extract single elements from an object. </span>
 <span id="cb36-91"><a href="#cb36-91" aria-hidden="true" tabindex="-1"></a>Let's start by creating a simple, single dimension vector. </span>
@@ -954,7 +950,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb36-144"><a href="#cb36-144" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb36-145"><a href="#cb36-145" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb36-146"><a href="#cb36-146" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb36-147"><a href="#cb36-147" aria-hidden="true" tabindex="-1"></a><span class="fu">## Multiple dimension square bois: `[]` {.unnumbered}</span></span>
+<span id="cb36-147"><a href="#cb36-147" aria-hidden="true" tabindex="-1"></a><span class="fu">### Multiple dimension square bois: `[]` {.unnumbered}</span></span>
 <span id="cb36-148"><a href="#cb36-148" aria-hidden="true" tabindex="-1"></a>Now that we can see how to use the brackets when looking for single objects (like a simple vector), let's start to look at the use of brackets with an increase in dimensions. </span>
 <span id="cb36-149"><a href="#cb36-149" aria-hidden="true" tabindex="-1"></a>Multiple dimensions come into play when we are investigating a full data frame or matrix. </span>
 <span id="cb36-150"><a href="#cb36-150" aria-hidden="true" tabindex="-1"></a>In this section, we will be looking at the Sample_DF data frame we created above. </span>
@@ -1006,7 +1002,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb36-206"><a href="#cb36-206" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb36-207"><a href="#cb36-207" aria-hidden="true" tabindex="-1"></a>Our output shows us all of the values within the *insect* column. </span>
 <span id="cb36-208"><a href="#cb36-208" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb36-209"><a href="#cb36-209" aria-hidden="true" tabindex="-1"></a><span class="fu">## Last but not least, the pipe: `%&gt;%` {.unnumbered}</span></span>
+<span id="cb36-209"><a href="#cb36-209" aria-hidden="true" tabindex="-1"></a><span class="fu">### Last but not least, the pipe: `%&gt;%` {.unnumbered}</span></span>
 <span id="cb36-210"><a href="#cb36-210" aria-hidden="true" tabindex="-1"></a>For the sake of not working too far ahead, I will not include many examples here.</span>
 <span id="cb36-211"><a href="#cb36-211" aria-hidden="true" tabindex="-1"></a>In the <span class="co">[</span><span class="ot">data wrangling</span><span class="co">](lesson07.qmd)</span> section, I will be *exclusively* using the pipe operator. </span>
 <span id="cb36-212"><a href="#cb36-212" aria-hidden="true" tabindex="-1"></a>Please see that section for working examples of the pipe operator. </span>

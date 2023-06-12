@@ -1,12 +1,12 @@
 # Several methods for calling different variables
-# Background of the operators
+## Background of the operators
 When calling specific variable, list, or object in R, there are three main ways. 
 These include the `$` operator, the `[]` (bracket), and the `%>%` (pipe) operator. 
 These operators work in similar ways in that they allow you to access specific *pieces* of your data frame. 
 
 In this section we will investigate all three. 
 
-## The dollar sign: `$` {.unnumbered}
+### The dollar sign: `$` {.unnumbered}
 This operator is used in R to access the list of a data frame. You can use this operator to access variables, add values or objects, update (e.g., change a class), and delete variables from a data frame.
 
 Let's start by creating a data frame. 
@@ -75,7 +75,7 @@ print(New_DF) #show me the new df
 
 Notice here, the new object **only** houses the values from the *score* column. 
 
-## Single dimension square bois: `[]` {.unnumbered}
+### Single dimension square bois: `[]` {.unnumbered}
 Brackets `[]`, in R, work similarly to that of the dollar sign (`$`).
 Brackets are especially useful when we want to extract single elements from an object. 
 Let's start by creating a simple, single dimension vector. 
@@ -124,7 +124,7 @@ Vector_One[Vector_One != 2] #extracting values that do not equal 2
 
 ```
 
-## Multiple dimension square bois: `[]` {.unnumbered}
+### Multiple dimension square bois: `[]` {.unnumbered}
 Now that we can see how to use the brackets when looking for single objects (like a simple vector), let's start to look at the use of brackets with an increase in dimensions. 
 Multiple dimensions come into play when we are investigating a full data frame or matrix. 
 In this section, we will be looking at the Sample_DF data frame we created above. 
@@ -176,7 +176,7 @@ Sample_DF[, "insect"] #extracting values from all rows, but just the insect colu
 
 Our output shows us all of the values within the *insect* column. 
 
-## Last but not least, the pipe: `%>%` {.unnumbered}
+### Last but not least, the pipe: `%>%` {.unnumbered}
 For the sake of not working too far ahead, I will not include many examples here.
 In the [data wrangling](lesson07.qmd) section, I will be *exclusively* using the pipe operator. 
 Please see that section for working examples of the pipe operator. 

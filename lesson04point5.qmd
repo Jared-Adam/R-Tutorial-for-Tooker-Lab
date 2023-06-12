@@ -1,5 +1,5 @@
 # Several methods for calling different variables
-# Background {.unnumbered}
+# Background of the operators
 When calling specific variable, list, or object in R, there are three main ways. 
 These include the `$` operator, the `[]` (bracket), and the `%>%` (pipe) operator. 
 These operators work in similar ways in that they allow you to access specific *pieces* of your data frame. 

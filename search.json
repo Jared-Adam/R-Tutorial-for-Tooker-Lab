@@ -74,7 +74,7 @@
     "href": "lesson04point5.html",
     "title": "\n5  Several methods for calling different variables\n",
     "section": "",
-    "text": "Background\nWhen calling specific variable, list, or object in R, there are three main ways. These include the $ operator, the [] (bracket), and the %&gt;% (pipe) operator. These operators work in similar ways in that they allow you to access specific pieces of your data frame.\nIn this section we will investigate all three."
+    "text": "6 Background of the operators\nWhen calling specific variable, list, or object in R, there are three main ways. These include the $ operator, the [] (bracket), and the %&gt;% (pipe) operator. These operators work in similar ways in that they allow you to access specific pieces of your data frame.\nIn this section we will investigate all three."
   },
   {
     "objectID": "lesson04point5.html#the-dollar-sign",

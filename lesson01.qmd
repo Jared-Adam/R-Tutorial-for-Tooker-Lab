@@ -11,9 +11,9 @@ The **purpose** of programming is to find a sequence of instructions that will a
     
 ### What is R? {.unnumbered}
 At it's root, R is a language and environment for statistical computing and graphic building. 
-R provides a variety of statistical (*liner and nonlinear modeling, classical statistical tests, time series analysis, classification, etc.*) and graphical techniques (*Base R, ggplot, etc.*). 
+R provides a variety of statistical (*linear and nonlinear modeling, classical statistical tests, time series analysis, classification, etc.*) and graphical techniques (*Base R, ggplot, etc.*). 
 
-This software **excels** in it's ease of producing publication-ready high-quality plots, use of mathematical symbols, implementation of equations and formulas, and much more. 
+This software **excels** in its ease of producing publication-ready high-quality plots, use of mathematical symbols, implementation of equations and formulas, and much more. 
 Along with this, R is also a free, open-source software available on a wide variety of platforms, including both **Windows and MacOS**. 
 
 ## Getting started with R

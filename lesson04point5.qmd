@@ -1,0 +1,275 @@
+# Several methods for calling different variables
+# Background {.unnumbered}
+When calling specific variable, list, or object in R, there are three main ways. 
+These include the `$` operator, the `[]` (bracket), and the `%>%` (pipe) operator. 
+These operators work in similar ways in that they allow you to access specific *pieces* of your data frame. 
+
+In this section we will investigate all three. 
+
+## The dollar sign: `$` {.unnumbered}
+This operator is used in R to access the list of a data frame. You can use this operator to access variables, add values or objects, update (e.g., change a class), and delete variables from a data frame.
+
+Let's start by creating a data frame. 
+
+```{r}
+score <- 1:4 #score column with values of 1-4
+
+insect <- c('wasp', 'beetle', 'ant', 'TrueBug') #insect column with a list of names 
+
+field <- c('corn', 'beans', 'corn', 'beans') #field column with a list of names
+
+Avg_Weight_mg <- c(2, 7, 0.5, 3) #assigning weight values to each insect
+
+Sample_DF <- data.frame(score, insect, field, Avg_Weight_mg) #using the data.frame function to create a date frame with the columns I established above 
+
+print(Sample_DF) #using the print function to view my new data frame
+```
+
+Now that we have our data frame, let's use the `$` operator to investigate our data. 
+
+First, let's say we want to look at the *insect* column. 
+The `$` operator here pulls out the just the values of this column. 
+**Notice**, to use this, we need to specify a source. 
+The source here is '*Sample_DF*'.
+Try this operator out to see which variations of column names will, and will not provide you with an output. 
+
+```{r}
+Sample_DF$insect #show me the insect column within Sample_DF
+```
+
+
+
+So, now we can see the functionality of this operator as a means of viewing data. 
+Let's now investigate adding a new column to this existing *Sample_DF.* 
+
+In this example, we will be adding a column to specify whether the insect was an adult, or not. 
+We will do this by adding our new object name following our source, *Sample_DF*, and then specifying the values of this column. 
+*Remember*, we need to have a source data frame when we use this operator. 
+
+```{r}
+Sample_DF$adult <- c('yes', 'no', 'no', 'yes') #naming a new column IN Sample_DF with the values within c()
+
+print(Sample_DF) #printing this updated df
+```
+
+We can now see our new column was added to the right-hand side of the existing data frame.
+
+Lettuce look at one more example of how we can use this operator. 
+Here, we will be changing the *class* of an object within Sample_DF. 
+
+In this example, I want to change the class of *score* from integer, to numeric. 
+Notice, I have to call the data source in the beginning to tell R I **do not** want to create a new object, I only want to change my existing data frame. Next, I need to specify the source for the function, **as.numeric**. 
+
+```{r}
+Sample_DF$score <- as.numeric(Sample_DF$score) #within my df, in the score column, change the class to numerical 
+```
+
+If you wanted to create a new object with this change, we can simply change the name of the object. 
+
+We can do this, like so. 
+```{r}
+New_DF <- as.numeric(Sample_DF$score) #within a new df, in the score column, change the class to numerical
+
+print(New_DF) #show me the new df
+```
+
+Notice here, the new object **only** houses the values from the *score* column. 
+
+## Single dimension square bois: `[]` {.unnumbered}
+Brackets `[]`, in R, work similarly to that of the dollar sign (`$`).
+Brackets are especially useful when we want to extract single elements from an object. 
+Let's start by creating a simple, single dimension vector. 
+
+```{r}
+#ceating a numeric vector
+Vector_One <- c(1,2,3,4,5,6)
+```
+
+Now, let's pull some stoof out. 
+In this example, I am going to pull out several individual values from the vector we just created. 
+
+```{r}
+Vector_One[1] #extracting the first value of the data set 
+
+Vector_One[3] #extracting the third value of the data set 
+```
+
+Now that we have extracted individual values, let's pull several out at once. 
+Notice that the syntax has changed a bit. 
+We now **must** tell R that we want to combine the three values into one output. 
+This is done by adding, *c(1,2,3)*, within our brackets
+
+```{r}
+Vector_One[c(1,2,3)] #extracting the first, second, and third value of the data set
+```
+
+The next step is to have R to pull values out based on a command. 
+In the following example, we will use some of the [logic commands](lesson04.qmd) we covered earlier. 
+
+Let's say I want to see all of the values in this data set that are above the number 3. 
+
+```{r}
+Vector_One[Vector_One > 3] #extracting values greater than 3
+```
+
+We can repeat this step with any logical operator we would like. 
+
+For example.
+
+```{r}
+#| output: false
+Vector_One[Vector_One >= 2] #extracting values greater than or equal to 2
+
+Vector_One[Vector_One != 2] #extracting values that do not equal 2
+
+```
+
+## Multiple dimension square bois: `[]` {.unnumbered}
+Now that we can see how to use the brackets when looking for single objects (like a simple vector), let's start to look at the use of brackets with an increase in dimensions. 
+Multiple dimensions come into play when we are investigating a full data frame or matrix. 
+In this section, we will be looking at the Sample_DF data frame we created above. 
+
+Within the bracket are assigned values. 
+By this, I mean, depending on the *location* of the number within the bracket, the location that information is pulled from will change. 
+The assigned locations are **[row, column]**
+
+For example, if we were to run **[1,2]**, our output would be the value in the *first* row and *second* column.
+
+In this example, we will pull out the values from the first row, and second column. 
+
+```{r}
+Sample_DF[1,2] #extracting values from row 1 and column 2
+```
+
+Next, let's investigate what happens when we leave one of the 'values' blank. 
+
+```{r}
+Sample_DF[,2] #extracting values from all rows and the second column
+```
+
+What we see here is that R gave us the values from all rows, but just the second column. 
+
+We can use the same method if we want to view information from all one row, but *all* columns. 
+
+```{r}
+Sample_DF[1,] #extracting values from row 1, and all columns 
+```
+
+In the next example, we will investigate how to *exclude* information. 
+Let's say we want to view the whole data frame except for the values of row 1. 
+This is done by using, *-1*, in the row value of the brackets. 
+
+In this example, I am telling R to exclude all values of row 1 from the output. 
+
+```{r}
+Sample_DF[-1,] #extracting all values, except for row 1 information
+```
+
+In our last example of the bracket, we will extract information from a specified column, but all rows. 
+To do this, we will continue to leave the row value blank, but add in the exact name of the column we seek to view. 
+
+Let's take a look at the 'insect' column. 
+
+```{r}
+Sample_DF[, "insect"] #extracting values from all rows, but just the insect column
+```
+
+Our output shows us all of the values within the *insect* column. 
+
+## Last but not least, the pipe: `%>%` {.unnumbered}
+For the sake of not working too far ahead, I will not include many examples here.
+In the [data wrangling](lesson07.qmd) section, I will be *exclusively* using the pipe operator. 
+Please see that section for working examples of the pipe operator. 
+
+SO. 
+We have investigated, and worked through, the dollar sign operator and brackets for pulling out specific elements. 
+These methods are certainly effective, but as we start to work through larger data sets of raw data, there may be many changes we need to apply.
+
+To accomplish this, we could write out a new command line for each iteration, OR, we can 'pipe' several commands into one operation. 
+This processing of piping *links* all of our changes to one command, allowing for efficiency and easy error-tracking. 
+To reiterate, this task is the *chaining* of arguments into one command.
+
+This operator, the pipe `%>%`, is arguably one of the most important operators in data wrangling and processing. 
+
+Rory Spanton, with *Toward Data Science*, explains this process well, "To visualize this process, imagine a factory with different machines placed along a conveyor belt. Each machine is a function that performs a stage of our analysis, like filtering or transforming data. The pipe therefore works like a conveyor belt, transporting the output of one machine to another for further processing." 
+
+Here I will write out two examples. 
+Within these examples, I will be creating [functions](lesson05.qmd) and then running them sequentially both with, and without the pipe operator.
+We **will** cover writing functions in the future. 
+
+```{r}
+# starting with creating three separate functions 
+
+# a function to add two values
+add <- function(x,y) {
+  return(x+y)
+}
+
+# a function to multiply two values
+mul <- function(x,y) {
+  return(x*y)
+}
+
+# a function to divide two values
+div <- function(x,y) {
+  return(x/y)
+}
+```
+
+Now that we have our functions created, let's put them to work in the *long form*. 
+
+```{r}
+# I am now calling each function sequentially 
+
+result_1 <- add(2,4) # applying my add function to two values (x,y)
+
+result_2 <- mul(result_1, 5) # applying my mul function to the results from the add function (x) and a new value of 5 (y)
+
+result_3 <- div(result_2, 6) # applying my div function to the results from the mul function (x) and a new value of 6 (y)
+
+print(result_3)
+
+```
+
+As we can see, this method is effective. 
+But, where it falters, is that we must save each iteration and then input that object name into the next function. 
+While this example is simple, we can imagine how with an increase in the complexity of our functions and sequential manipulations, this can become an overwhelming method.
+
+Let's now look at the same sequence of functions, but this time using the pipe operator. 
+
+First, we will need to load in the **dplyr** package to use the pipe operator. 
+
+```{r}
+#| output: false
+library(dplyr) #loading the dplyr package
+```
+
+```{r}
+# piping my three functions together 
+results <- add(2,4) %>% # adding 2 and 4 with the add function 
+  mul(5) %>% # chaining the results from add into the mul function
+  div(6) #chaining the results from the mul function into the div function
+
+print(results) #printing the results 
+```
+
+**We got the same output! **
+As we can see, this method is both cleaner (regarding your environment and saving objects over and over) and safer (with regard to errors) than the sequential example. 
+
+### The results, explained {.unnumbered}
+
+Continuing to follow Rory's brilliant synthesis of this operator, I will use their example here. 
+Let's think of `%>%` as the word '*then*'. 
+
+Let's now write out the same piping example. 
+
+- The results from this chain will be named "*results*", 
+
+  - I will be **adding** the numbers 2 and 4 together, *THEN*
+  
+  - I will **multiply** the results from the addition by 5, *THEN*
+  
+  - I will **divide** the results from the multiplication by 6
+
+As we can see, this operator acts as a *link in the chain* which holds the whole argument together, allowing it to act as one command. 
+The pipe operator is an excellent addition your coding repertoire when you would like to eliminate the saving of multiple objects with each iterative change, lower the risk of an error occurring within the multiple changes, and allow for a cleaner, more palatable, R script. 

@@ -7,7 +7,7 @@ First and foremost, my Excel file never needs to change.
 Along with this, I only need to save it once. 
 No saving a new copy every time I make a new column or want to write a formula. 
 
-In this section, we will go over some important packages and key functions that will aid in the transition from Excel-based data wrangling to exclusively R-based data wangling. 
+In this section, we will go over some important packages and key functions that will aid in the transition from Excel-based data wrangling to exclusively R-based data wrangling. 
 SO, without further ado, lettuce begin. 
 
 ### What we use to wrangle {.unnumbered}

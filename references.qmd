@@ -17,3 +17,6 @@
 4. nd. "The tidyverse style guide" *tidyverse*. ([link](https://style.tidyverse.org/))
 
 5. nd. "Google's R Style Guide" *styleguide*. ([link](https://google.github.io/styleguide/Rguide.html))
+
+
+6. https://towardsdatascience.com/an-introduction-to-the-pipe-in-r-823090760d64 pipe

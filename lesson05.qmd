@@ -75,7 +75,7 @@ It is wise to download this now, because we will revisit this data set in future
 ```{r}
 #| warning: false
 
-#install.packages(palmerpenguins)
+#install.packages("palmerpenguins")
 
 library(palmerpenguins)
 ```

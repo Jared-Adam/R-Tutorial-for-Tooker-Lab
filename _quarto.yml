@@ -15,6 +15,7 @@ book:
       chapters: 
         - lesson03.qmd
         - lesson04.qmd
+        - lesson04point5.qmd
         - lesson05.qmd
         - lesson06.qmd
     - part: "Buckle up"

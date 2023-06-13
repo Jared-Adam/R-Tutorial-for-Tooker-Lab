@@ -390,7 +390,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <pre><code>[1] 1 2 3</code></pre>
 </div>
 </div>
-<p>The next step is to have R to pull values out based on a command. In the following example, we will use some of the <a href="lesson04.qmd">logic commands</a> we covered earlier.</p>
+<p>The next step is to have R to pull values out based on a command. In the following example, we will use some of the <a href="./d_functionality.html">logic commands</a> we covered earlier.</p>
 <p>Let’s say I want to see all of the values in this data set that are above the number 3.</p>
 <div class="cell">
 <div class="sourceCode" id="cb17"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">Vector_One</span><span class="op">[</span><span class="va">Vector_One</span> <span class="op">&gt;</span> <span class="fl">3</span><span class="op">]</span> <span class="co">#extracting values greater than 3</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -455,12 +455,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Our output shows us all of the values within the <em>insect</em> column.</p>
 </section><section id="last-but-not-least-the-pipe" class="level3 unnumbered"><h3 class="unnumbered anchored" data-anchor-id="last-but-not-least-the-pipe">Last but not least, the pipe: <code>%&gt;%</code>
 </h3>
-<p>For the sake of not working too far ahead, I will not include many examples here. In the <a href="lesson07.qmd">data wrangling</a> section, I will be <em>exclusively</em> using the pipe operator. Please see that section for working examples of the pipe operator.</p>
+<p>For the sake of not working too far ahead, I will not include many examples here. In the <a href="./h_wrangling.html">data wrangling</a> section, I will be <em>exclusively</em> using the pipe operator. Please see that section for working examples of the pipe operator.</p>
 <p>SO. We have investigated, and worked through, the dollar sign operator and brackets for pulling out specific elements. These methods are certainly effective, but as we start to work through larger data sets of raw data, there may be many changes we need to apply.</p>
 <p>To accomplish this, we could write out a new command line for each iteration, OR, we can ‘pipe’ several commands into one operation. This processing of piping <em>links</em> all of our changes to one command, allowing for efficiency and easy error-tracking. To reiterate, this task is the <em>chaining</em> of arguments into one command.</p>
 <p>This operator, the pipe <code>%&gt;%</code>, is arguably one of the most important operators in data wrangling and processing.</p>
 <p>Rory Spanton, with <em>Toward Data Science</em>, explains this process well, “To visualize this process, imagine a factory with different machines placed along a conveyor belt. Each machine is a function that performs a stage of our analysis, like filtering or transforming data. The pipe therefore works like a conveyor belt, transporting the output of one machine to another for further processing.”</p>
-<p>Here I will write out two examples. Within these examples, I will be creating <a href="lesson05.qmd">functions</a> and then running them sequentially both with, and without the pipe operator. We <strong>will</strong> cover writing functions in the future.</p>
+<p>Here I will write out two examples. Within these examples, I will be creating <a href="./f_fancy.html">functions</a> and then running them sequentially both with, and without the pipe operator. We <strong>will</strong> cover writing functions in the future.</p>
 <div class="cell">
 <div class="sourceCode" id="cb30"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># starting with creating three separate functions </span></span>
 <span></span>
@@ -511,7 +511,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <pre><code>[1] 5</code></pre>
 </div>
 </div>
-<p><strong>We got the same output! </strong> As we can see, this method is both cleaner (regarding your environment and saving objects over and over) and safer (with regard to errors) than the sequential example.</p>
+<p><strong>We got the same output! </strong> As we can see, this method is both cleaner (regarding your environment and saving objects over and over) and safer (regarding to errors) than the sequential example.</p>
 </section><section id="the-results-explained" class="level3 unnumbered"><h3 class="unnumbered anchored" data-anchor-id="the-results-explained">The results, explained</h3>
 <p>Continuing to follow Rory’s brilliant synthesis of this operator, I will use their example here. Let’s think of <code>%&gt;%</code> as the word ‘<em>then</em>’.</p>
 <p>Let’s now write out the same piping example.</p>
@@ -930,7 +930,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb36-120"><a href="#cb36-120" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb36-121"><a href="#cb36-121" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb36-122"><a href="#cb36-122" aria-hidden="true" tabindex="-1"></a>The next step is to have R to pull values out based on a command. </span>
-<span id="cb36-123"><a href="#cb36-123" aria-hidden="true" tabindex="-1"></a>In the following example, we will use some of the <span class="co">[</span><span class="ot">logic commands</span><span class="co">](lesson04.qmd)</span> we covered earlier. </span>
+<span id="cb36-123"><a href="#cb36-123" aria-hidden="true" tabindex="-1"></a>In the following example, we will use some of the <span class="co">[</span><span class="ot">logic commands</span><span class="co">](d_functionality.qmd)</span> we covered earlier. </span>
 <span id="cb36-124"><a href="#cb36-124" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb36-125"><a href="#cb36-125" aria-hidden="true" tabindex="-1"></a>Let's say I want to see all of the values in this data set that are above the number 3. </span>
 <span id="cb36-126"><a href="#cb36-126" aria-hidden="true" tabindex="-1"></a></span>
@@ -1004,7 +1004,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb36-208"><a href="#cb36-208" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb36-209"><a href="#cb36-209" aria-hidden="true" tabindex="-1"></a><span class="fu">### Last but not least, the pipe: `%&gt;%` {.unnumbered}</span></span>
 <span id="cb36-210"><a href="#cb36-210" aria-hidden="true" tabindex="-1"></a>For the sake of not working too far ahead, I will not include many examples here.</span>
-<span id="cb36-211"><a href="#cb36-211" aria-hidden="true" tabindex="-1"></a>In the <span class="co">[</span><span class="ot">data wrangling</span><span class="co">](lesson07.qmd)</span> section, I will be *exclusively* using the pipe operator. </span>
+<span id="cb36-211"><a href="#cb36-211" aria-hidden="true" tabindex="-1"></a>In the <span class="co">[</span><span class="ot">data wrangling</span><span class="co">](h_wrangling.qmd)</span> section, I will be *exclusively* using the pipe operator. </span>
 <span id="cb36-212"><a href="#cb36-212" aria-hidden="true" tabindex="-1"></a>Please see that section for working examples of the pipe operator. </span>
 <span id="cb36-213"><a href="#cb36-213" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb36-214"><a href="#cb36-214" aria-hidden="true" tabindex="-1"></a>SO. </span>
@@ -1020,7 +1020,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb36-224"><a href="#cb36-224" aria-hidden="true" tabindex="-1"></a>Rory Spanton, with *Toward Data Science*, explains this process well, "To visualize this process, imagine a factory with different machines placed along a conveyor belt. Each machine is a function that performs a stage of our analysis, like filtering or transforming data. The pipe therefore works like a conveyor belt, transporting the output of one machine to another for further processing." </span>
 <span id="cb36-225"><a href="#cb36-225" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb36-226"><a href="#cb36-226" aria-hidden="true" tabindex="-1"></a>Here I will write out two examples. </span>
-<span id="cb36-227"><a href="#cb36-227" aria-hidden="true" tabindex="-1"></a>Within these examples, I will be creating <span class="co">[</span><span class="ot">functions</span><span class="co">](lesson05.qmd)</span> and then running them sequentially both with, and without the pipe operator.</span>
+<span id="cb36-227"><a href="#cb36-227" aria-hidden="true" tabindex="-1"></a>Within these examples, I will be creating <span class="co">[</span><span class="ot">functions</span><span class="co">](f_fancy.qmd)</span> and then running them sequentially both with, and without the pipe operator.</span>
 <span id="cb36-228"><a href="#cb36-228" aria-hidden="true" tabindex="-1"></a>We **will** cover writing functions in the future. </span>
 <span id="cb36-229"><a href="#cb36-229" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb36-232"><a href="#cb36-232" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
@@ -1080,7 +1080,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb36-292"><a href="#cb36-292" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb36-293"><a href="#cb36-293" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb36-294"><a href="#cb36-294" aria-hidden="true" tabindex="-1"></a>**We got the same output! **</span>
-<span id="cb36-295"><a href="#cb36-295" aria-hidden="true" tabindex="-1"></a>As we can see, this method is both cleaner (regarding your environment and saving objects over and over) and safer (with regard to errors) than the sequential example. </span>
+<span id="cb36-295"><a href="#cb36-295" aria-hidden="true" tabindex="-1"></a>As we can see, this method is both cleaner (regarding your environment and saving objects over and over) and safer (regarding to errors) than the sequential example. </span>
 <span id="cb36-296"><a href="#cb36-296" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb36-297"><a href="#cb36-297" aria-hidden="true" tabindex="-1"></a><span class="fu">### The results, explained {.unnumbered}</span></span>
 <span id="cb36-298"><a href="#cb36-298" aria-hidden="true" tabindex="-1"></a></span>

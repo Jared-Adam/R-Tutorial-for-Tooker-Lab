@@ -183,7 +183,7 @@ penguins %>%
   select(species, bill_length_mm, year) %>% 
   filter(
     year == 2007,#using the '==' operator to show everything with the year 2007
-    bill_length_mm < mean(bill_length_mm), # using the '<' to to view every row where the bill length is less than the avg bill length 
+    bill_length_mm > mean(bill_length_mm), # using '>' to view every row where the bill length is greater than the avg bill length 
   ) 
 ```
 
@@ -205,12 +205,12 @@ To do this, I will add another line below the bill length filter.
 This new line says *when species equals Chinstrap OR Gentoo*, keep them in the data set.
 
 ```{r}
-# filter()
+# select() and filter()
 penguins %>%
   select(species, bill_length_mm, year) %>% 
   filter(
     year == 2007,#using the '==' operator to show everything with the year 2007
-    bill_length_mm < mean(bill_length_mm),# using the '<' to to view every row where the bill length is less than the avg bill length 
+    bill_length_mm > mean(bill_length_mm),# using '>' to view every row where the bill length is greater than the avg bill length
     species == "Chinstrap" | species == "Gentoo" # look in species and pull out chinstrap and gentoo. | allows to command two species, similar to 'or'
   ) 
 ```
@@ -220,12 +220,12 @@ Another way to accomplish the same task is to tell R which values to *exclude*, 
 This is done by using the 'does not equal' operator to command R to return every species value that is not Adelie.
 
 ```{r}
-# filter()
+# select () and filter()
 penguins %>%
   select(species, bill_length_mm, year) %>% 
   filter(
     year == 2007,#using the '==' operator to show everything with the year 2007
-    bill_length_mm < mean(bill_length_mm),# using the '<' to to view every row where the bill length is less than the avg bill length 
+    bill_length_mm > mean(bill_length_mm),# using '>' to view every row where the bill length is greater than the avg bill length 
     species != "Adelie" #does not equal operator
   ) 
 
@@ -244,6 +244,7 @@ I then created a new column of the rounded bill length values using the **round*
 Lastly, using the **select** function, I command R to order this data set as follows.
 
 ```{r}
+# select(), mutate(), select()
 penguins %>%
   select(species, bill_length_mm, year) %>% 
   mutate( #mutate()
@@ -261,7 +262,7 @@ First, let's look at the means and standard deviations of both bill length and d
 This will be done by name new columns and then using either the **mean** function or **sd** function to produce a desired output.
 
 ```{r}
-
+# summarize ()
 penguins %>% 
   summarize( #summarize to run summary stats 
   bill_length_mean = mean(bill_length_mm), #new column with mean value of bill length
@@ -279,6 +280,7 @@ Using the **group_by** function, we can tell R to group our data set by one, or 
 In this example, I am telling R to **group_by** species, and then provide me with the means and standard deviations of bill length and depth. 
 
 ```{r}
+# group_by() and summarize()
 penguins %>% 
   group_by(species) %>% #grouping by one column, species 
   summarize( #summarize to run summary stats 
@@ -296,6 +298,7 @@ Using the **group_by** function again, we can accomplish this.
 In this example, the only change is I added ', year' into my **group_by** function. 
 
 ```{r}
+# group_by() and summarize()
 penguins %>% 
   group_by(species, year) %>% #grouping by two columns, species and year 
   summarize( #summarize to run summary stats 
@@ -312,7 +315,7 @@ penguins %>%
 Now that we have worked through some examples with Palmer Penguins, let's try and work through a data set of our own. 
 
 
-Attached here is a ([Slug data set.](https://pennstateoffice365-my.sharepoint.com/:x:/g/personal/jqa5357_psu_edu/EXojojTCn3lMlCm5-UZZejsBFgoLjtoMTZZHwdtZKtd6bw?e=lId60J)
+Attached here is a [Slug data set.](https://pennstateoffice365-my.sharepoint.com/:x:/g/personal/jqa5357_psu_edu/EXojojTCn3lMlCm5-UZZejsBFgoLjtoMTZZHwdtZKtd6bw?e=lId60J)
 
 **Remember**, you will need to import this file into R in the correct format!
 

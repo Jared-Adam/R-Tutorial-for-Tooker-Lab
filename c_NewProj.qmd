@@ -32,7 +32,7 @@ Your working directory is where you will have R pull data sheets from.
 There are two common ways of doing this. 
 
 The first step is to determine where R currently thinks our working directory is. 
-To do this, we use the **getdw** function. 
+To do this, we use the **getwd** function. 
 
 ```{r}
 #| output: false

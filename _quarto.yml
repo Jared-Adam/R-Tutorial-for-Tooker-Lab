@@ -6,25 +6,25 @@ book:
   author: "Jared Adam"
   date: "6/6/2023"
   chapters:
-    - index.qmd
+    - hello.qmd
     - part: "The Reasoning"
       chapters:
-        - lesson01.qmd
-        - lesson02.qmd
+        - a_introduction.qmd
+        - b_RasATool.qmd
     - part: "The Beginnings"
       chapters: 
-        - lesson03.qmd
-        - lesson04.qmd
-        - lesson04point5.qmd
-        - lesson05.qmd
-        - lesson06.qmd
+        - c_NewProj.qmd
+        - d_functionality.qmd
+        - e_CallingVariables.qmd
+        - f_fancy.qmd
+        - g_etiquette.qmd
     - part: "Buckle up"
       chapters: 
-        - lesson07.qmd
+        - h_wrangling.qmd
     - part: "Plotting along: IN BETA"
       chapters: 
-        #- lesson08.qmd
-        - lesson09.qmd 
+        #- i_ggplot.qmd
+        - j_ggplotHW.qmd 
     - part: "Last part"
       chapters: 
         - resources.qmd

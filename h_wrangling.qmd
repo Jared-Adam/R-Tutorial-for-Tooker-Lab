@@ -18,6 +18,7 @@ This package is **dplyr**.
 While I rely on this package a lot, I also use functions pre-installed in Base R while wrangling. 
 
 Please see the wrangling cheat sheets [here](resources.qmd).
+
 ## dplyr Examples
 
 
@@ -32,7 +33,7 @@ library(dplyr)
 library(tidyverse)
 
 library(palmerpenguins)
-data(package = 'palmerpenguins')
+data(package = 'palmerpenguins') #investigating the pieces of this data set. How many data sets are there? 
 ```
 
 ### NAs in R {.unnumbered}
@@ -45,18 +46,23 @@ We will do this by using the **which** function, followed by the **is.na** funct
 What these two functions do together is which locates all of the columns where NAs are present, based on the **is.na** function. 
 If we wanted to find all of the columns where there were no NAs, we could simply change **is.na** to **!is.na**.
 
+In this example, my command is to determine where the NAs are. Using the *arr.ind = TRUE* command, I am telling R to show me *exactly* where they are. 
+In this example we are using *penguins_raw*. 
+This is the **only** section that will use the raw data set in the example. 
+
 ```{r}
-which(is.na(penguins), arr.ind = TRUE)
+#| output: false
+which(is.na(penguins_raw), arr.ind = TRUE) #checking for NA locations in penguins_raw
 ```
 
 Now that we see there are NAs riddled throughout, we will name a new object (using the same name), but omitting all NAs. 
 
 In this example, I am using the **na.omit** function to remove all NAs from our penguin data set. 
-I am also naming this new object (penguins again for ease).
+I am also naming this new object (penguins_raw again for ease).
 
 ```{r}
-penguins <-
-  na.omit(penguins) #I must add this because there are NAs within this data set and these functions will not work otherwise 
+penguins_raw <-
+  na.omit(penguins_raw) #I must add this because there are NAs within this data set and these functions will not work otherwise 
 ```
 
 ### select() {.unnumbered}
@@ -66,6 +72,7 @@ This can be useful when removing variables we are not currently interested in.
 **Remember**, at any manipulation, you can save the changes as a new object which will maintain the integrity of the original if you must back track for whatever reason. 
 
 In this example, we use the **select** function to choose which columns we want to look at. 
+*Notice*, we are back to using *penguins*!
 
 ```{r}
 # select()
@@ -311,6 +318,11 @@ penguins %>%
 
 
 ## Practice on your own 
+
+First, take the penguins_raw data set and get it as close to the cleaned data set, penguins, as you can. 
+Use the methods we went over in this section, and apply changes where needed. 
+**Hint**, the is.na section is already ~done~. 
+Once complete, continue to the next practice assignment. 
 
 Now that we have worked through some examples with Palmer Penguins, let's try and work through a data set of our own. 
 

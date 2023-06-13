@@ -1,0 +1,16 @@
+{
+  "hash": "438ba7c5d1dd1a2ae025f3908975927e",
+  "result": {
+    "markdown": "---\nauthor: Assignment, Dr. Sara Hermann. Code, Jared Adam\nexecute: \n  echo: false\n---\n\n\n# Testing your skills: ggplot \n## Recreate these plots to the best of your ability {.unnumbered}\n\nIn this section, we will be using the **mtcars** data set. \nLet's start by reading in **ggplot** and the **mtcars** data set. \n\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(ggplot2)\ndata(\"mtcars\")\n```\n:::\n\n\nFor more information about this data set, look in the *help* section. \n\n::: {.cell}\n\n```{.r .cell-code}\n?mtcars()\n```\n:::\n\n\nNow, let's take a look a little closer at the data set. \nWhich 'class' do these variables belong to? \nAre they numeric? Characters? Integers? \n\nThis knowledge is very impoartant when building your plots.\n\n\n::: {.cell}\n\n```{.r .cell-code}\nView(mtcars)\nstr(mtcars)\n```\n:::\n\n\n### Hints {.unnumbered}\n\nHere is an example of how to change the variable type inside of the ggplot lines **and** outside. \nNotice here, we are calling the *am* column with the **$** operator. \n\n\n::: {.cell}\n\n```{.r .cell-code}\nggplot(mtcars, aes(x = as.factor(am)))\n```\n\n```{.r .cell-code}\nmtcars$am <- as.factor(mtcars$am)\n```\n:::\n\n\nYou may also need to search for ggplot format help on these. \nPlease see the extra resources at the bottom of this page. \n\n### Plot time {.unnumbered}\n\n#### Graph 1: geom_point {.unnumbered}\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](j_ggplotHW_files/figure-html/unnamed-chunk-5-1.png){width=672}\n:::\n:::\n\n\n#### Graph 2: geom_boxplot {.unnumbered}\n\n\n::: {.cell}\n::: {.cell-output .cell-output-stdout}\n```\n[1] \"0\" \"1\"\n```\n:::\n\n::: {.cell-output-display}\n![](j_ggplotHW_files/figure-html/unnamed-chunk-6-1.png){width=672}\n:::\n:::\n\n\n\n#### More to come!! 6/9/2023 {.unnumbered}\n\n### Additional resources {.unnumbered}\n\n[Lecture notes](https://www.jeffdoser.com/files/for875/_book/ggplot2.html)\n\n[Basic R graphics guide](https://www.jeffdoser.com/files/for875/_book/graphics.html)\n\n[ggplot online textbook](https://github.com/hadley/ggplot2-book)",
+    "supporting": [
+      "j_ggplotHW_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

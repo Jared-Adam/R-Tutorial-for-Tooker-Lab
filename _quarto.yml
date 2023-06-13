@@ -6,7 +6,7 @@ book:
   author: "Jared Adam"
   date: "6/6/2023"
   chapters:
-    - hello.qmd
+    - index.qmd
     - part: "The Reasoning"
       chapters:
         - a_introduction.qmd

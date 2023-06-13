@@ -7,7 +7,7 @@ This page will be updated as new information/ lessons are requested.
 The link will not change, so no trouble. 
 
 We suggest starting from the beginning (even if you have used R before) and working through each section. 
-When appropriate, previous sections will be referenced, sometimes linked, and we encourage you to use previous sections as when needed. 
+When appropriate, previous sections will be referenced, sometimes linked, and we encourage you to use previous sections when needed. 
 Along with this, there are snippets of code which we encourage you to give a burn and copy each into your script. 
 
 If you have any suggestions or concerns, please email me at **Jared.Adam@psu.edu**. 

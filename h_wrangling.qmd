@@ -168,7 +168,7 @@ Within R, we also have the ability to subset out data sets and pull out rows wit
 Let's say I *only* want to look at data from *2007.* 
 To accomplish this, we will use the **filter** function. 
 
-In this example, we will be adding the **filter** function as well as recall our knowledge of ([operators](lesson04.qmd)) within R.
+In this example, we will be adding the **filter** function as well as recall our knowledge of [operators](d_functionality.qmd) within R.
 
 ```{r}
 # select() and filter()

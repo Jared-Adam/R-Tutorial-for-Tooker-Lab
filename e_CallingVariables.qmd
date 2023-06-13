@@ -104,7 +104,7 @@ Vector_One[c(1,2,3)] #extracting the first, second, and third value of the data 
 ```
 
 The next step is to have R to pull values out based on a command. 
-In the following example, we will use some of the [logic commands](lesson04.qmd) we covered earlier. 
+In the following example, we will use some of the [logic commands](d_functionality.qmd) we covered earlier. 
 
 Let's say I want to see all of the values in this data set that are above the number 3. 
 
@@ -178,7 +178,7 @@ Our output shows us all of the values within the *insect* column.
 
 ### Last but not least, the pipe: `%>%` {.unnumbered}
 For the sake of not working too far ahead, I will not include many examples here.
-In the [data wrangling](lesson07.qmd) section, I will be *exclusively* using the pipe operator. 
+In the [data wrangling](h_wrangling.qmd) section, I will be *exclusively* using the pipe operator. 
 Please see that section for working examples of the pipe operator. 
 
 SO. 
@@ -194,7 +194,7 @@ This operator, the pipe `%>%`, is arguably one of the most important operators i
 Rory Spanton, with *Toward Data Science*, explains this process well, "To visualize this process, imagine a factory with different machines placed along a conveyor belt. Each machine is a function that performs a stage of our analysis, like filtering or transforming data. The pipe therefore works like a conveyor belt, transporting the output of one machine to another for further processing." 
 
 Here I will write out two examples. 
-Within these examples, I will be creating [functions](lesson05.qmd) and then running them sequentially both with, and without the pipe operator.
+Within these examples, I will be creating [functions](f_fancy.qmd) and then running them sequentially both with, and without the pipe operator.
 We **will** cover writing functions in the future. 
 
 ```{r}
@@ -254,7 +254,7 @@ print(results) #printing the results
 ```
 
 **We got the same output! **
-As we can see, this method is both cleaner (regarding your environment and saving objects over and over) and safer (with regard to errors) than the sequential example. 
+As we can see, this method is both cleaner (regarding your environment and saving objects over and over) and safer (regarding to errors) than the sequential example. 
 
 ### The results, explained {.unnumbered}
 

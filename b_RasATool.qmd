@@ -39,7 +39,7 @@ Personally, that sounds like a **nightmare.**
 Now that I got that off my chest. Let's chat about R. 
 Within R are some great options for viewing our data.
 We can look in our environment. 
-We can call certain base R functions ([See functions section here](lesson05.qmd)) to view different sections. 
+We can call certain base R functions ([See functions section here](f_fancy.qmd)) to view different sections. 
 
 Here are some examples of these functions.
 

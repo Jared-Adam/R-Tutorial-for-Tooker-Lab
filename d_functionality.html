@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>One code to rule them all (┛ಠ_ಠ)┛彡O - References</title>
+<title>One code to rule them all (┛ಠ_ಠ)┛彡O - 4&nbsp; Basic functionality</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -64,7 +64,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./Endearment.html" rel="prev">
+<link href="./e_CallingVariables.html" rel="next">
+<link href="./c_NewProj.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -113,7 +114,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./references.html">References</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./c_NewProj.html">The Beginnings</a></li><li class="breadcrumb-item"><a href="./d_functionality.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Basic functionality</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -126,7 +127,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <div class="quarto-title-block"><div><h1 class="title">References</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+      <div class="quarto-title-block"><div><h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Basic functionality</span></h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
                       </div>
   </div>
     
@@ -203,7 +204,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./d_functionality.html" class="sidebar-item-text sidebar-link">
+  <a href="./d_functionality.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Basic functionality</span></span></a>
   </div>
 </li>
@@ -286,7 +287,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./references.html" class="sidebar-item-text sidebar-link active">
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">References</span></a>
   </div>
 </li>
@@ -296,7 +297,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#shortcuts-arithmetic-commands-logic-and-other-helpful-tools" id="toc-shortcuts-arithmetic-commands-logic-and-other-helpful-tools" class="nav-link active" data-scroll-target="#shortcuts-arithmetic-commands-logic-and-other-helpful-tools"><span class="header-section-number">4.1</span> Shortcuts, arithmetic commands, logic, and other helpful tools</a>
+  <ul class="collapse">
+  <li><a href="#shortcuts" id="toc-shortcuts" class="nav-link" data-scroll-target="#shortcuts">Shortcuts</a></li>
+  <li><a href="#arithmetic-operators" id="toc-arithmetic-operators" class="nav-link" data-scroll-target="#arithmetic-operators">Arithmetic operators</a></li>
+  <li><a href="#logic-commands" id="toc-logic-commands" class="nav-link" data-scroll-target="#logic-commands">Logic commands</a></li>
+  <li><a href="#other-important-operators" id="toc-other-important-operators" class="nav-link" data-scroll-target="#other-important-operators">Other important operators</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
@@ -304,28 +317,221 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<p><strong>What is R?</strong></p>
-<ol type="1">
-<li>nd. “What is R?” <em>The R Foundation</em>. (<a href="https://www.r-project.org/about.html">link</a>)</li>
-</ol>
-<p><strong>RStudio vs r</strong></p>
-<ol start="2" type="1">
-<li>nd. “R and RStudio” <em>BYU: Department of Statistics</em>. (<a href="https://statistics.byu.edu/r-and-rstudio">link</a>)</li>
-</ol>
-<p><strong>Excel vs r</strong></p>
-<ol start="3" type="1">
-<li>Abrahams, Amieroh. February 23,2023. “Why should I use R: The Excel R Data Wrangling comparison” <em>jumping rivers</em>. (<a href="https://www.jumpingrivers.com/blog/comparing-r-excel-data-wrangling/">link</a>)</li>
-</ol>
-<p><strong>Style</strong></p>
-<ol start="4" type="1">
-<li><p>nd. “The tidyverse style guide” <em>tidyverse</em>. (<a href="https://style.tidyverse.org/">link</a>)</p></li>
-<li><p>nd. “Google’s R Style Guide” <em>styleguide</em>. (<a href="https://google.github.io/styleguide/Rguide.html">link</a>)</p></li>
-<li><p>https://towardsdatascience.com/an-introduction-to-the-pipe-in-r-823090760d64 pipe</p></li>
-</ol>
+<section id="shortcuts-arithmetic-commands-logic-and-other-helpful-tools" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="shortcuts-arithmetic-commands-logic-and-other-helpful-tools"><span class="header-section-number">4.1</span> Shortcuts, arithmetic commands, logic, and other helpful tools</h2>
+<section id="shortcuts" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="shortcuts">Shortcuts</h3>
+<section id="run" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="run">Run</h4>
+<table class="table">
+<thead>
+<tr class="header">
+<th><strong>Task</strong></th>
+<th><strong>Windows &amp; Linux</strong></th>
+<th><strong>Mac</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Run</td>
+<td><code>Ctrl + Enter</code></td>
+<td><code>Cmd + Return</code></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="shortcuts-for-editing" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="shortcuts-for-editing">Shortcuts for editing</h4>
+<table class="table">
+<thead>
+<tr class="header">
+<th><strong>Task</strong></th>
+<th><strong>Windows &amp; Linux</strong></th>
+<th><strong>Mac</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Copy</td>
+<td><code>Ctrl + C</code></td>
+<td><code>Cmd + C</code></td>
+</tr>
+<tr class="even">
+<td>Paste</td>
+<td><code>Ctrl + V</code></td>
+<td><code>Cmd + V</code></td>
+</tr>
+<tr class="odd">
+<td>Undo</td>
+<td><code>Ctrl + Z</code></td>
+<td><code>Cmd + Z</code></td>
+</tr>
+<tr class="even">
+<td>Redo</td>
+<td><code>Ctrl + Shift + Z</code></td>
+<td><code>Cmd + Shift + Z</code></td>
+</tr>
+<tr class="odd">
+<td>Select All</td>
+<td><code>Ctrl + A</code></td>
+<td><code>Cmd + A</code></td>
+</tr>
+<tr class="even">
+<td>Indent</td>
+<td><code>Tab</code></td>
+<td><code>Tab</code></td>
+</tr>
+<tr class="odd">
+<td>Outdent</td>
+<td><code>Shift + Tab</code></td>
+<td><code>Shift + Tab</code></td>
+</tr>
+<tr class="even">
+<td>Insert pipe operator</td>
+<td><code>Cmd + Shift + M</code></td>
+<td><code>Cmd + Shift + M</code></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="arithmetic-operators" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="arithmetic-operators">Arithmetic operators</h3>
+<table class="table">
+<thead>
+<tr class="header">
+<th><strong>Task</strong></th>
+<th><strong>Operator</strong></th>
+<th><strong>Example</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Addition</td>
+<td><code>+</code></td>
+<td><code>x + y</code></td>
+</tr>
+<tr class="even">
+<td>Substraction</td>
+<td><code>-</code></td>
+<td><code>x - y</code></td>
+</tr>
+<tr class="odd">
+<td>Multiplication</td>
+<td><code>*</code></td>
+<td><code>x * y</code></td>
+</tr>
+<tr class="even">
+<td>Division</td>
+<td><code>/</code></td>
+<td><code>x / y</code></td>
+</tr>
+<tr class="odd">
+<td>Exponent</td>
+<td><code>^</code></td>
+<td><code>x ^ y</code></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="logic-commands" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="logic-commands">Logic commands</h3>
+<table class="table">
+<thead>
+<tr class="header">
+<th><strong>Task</strong></th>
+<th><strong>Operator</strong></th>
+<th><strong>Example</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Equal</td>
+<td><code>==</code></td>
+<td><code>x == y</code></td>
+</tr>
+<tr class="even">
+<td>Not equal</td>
+<td><code>!=</code></td>
+<td><code>x != y</code></td>
+</tr>
+<tr class="odd">
+<td>Greater than</td>
+<td><code>&gt;</code></td>
+<td><code>x &gt; y</code></td>
+</tr>
+<tr class="even">
+<td>Less than</td>
+<td><code>&lt;</code></td>
+<td><code>x &lt; y</code></td>
+</tr>
+<tr class="odd">
+<td>Greater than or equal to</td>
+<td><code>&gt;=</code></td>
+<td><code>x &gt;= y</code></td>
+</tr>
+<tr class="even">
+<td>Less than or equal to</td>
+<td><code>&lt;=</code></td>
+<td><code>x &lt;= y</code></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="other-important-operators" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="other-important-operators">Other important operators</h3>
+<table class="table">
+<colgroup>
+<col style="width: 56%">
+<col style="width: 5%">
+<col style="width: 37%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Task</strong></th>
+<th><strong>Operator</strong></th>
+<th><strong>Example</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Call for the help menu for the respective function</td>
+<td><code>?</code></td>
+<td><code>?mean</code></td>
+</tr>
+<tr class="even">
+<td>Assigning a name or value</td>
+<td><code>&lt;-</code></td>
+<td><code>Name &lt;- "Chop"</code></td>
+</tr>
+<tr class="odd">
+<td>To access one variable in a data set</td>
+<td><code>$</code></td>
+<td><code>DataSet$IWantThisColumn</code></td>
+</tr>
+<tr class="even">
+<td>Searching or calling exact characters</td>
+<td><code>""</code></td>
+<td><code>"Chop Spring"</code></td>
+</tr>
+<tr class="odd">
+<td>Concatenate (c), combines arguments, both numbers or words, into a vector</td>
+<td><code>c()</code></td>
+<td><code>Name &lt;- c("Jared", "Daniel", "Chop")</code> <code>Numbers &lt;- c(1,2,3)</code></td>
+</tr>
+<tr class="even">
+<td>Another form of concatenation used when writing long scripts of code which span multiple lines</td>
+<td><code>+</code></td>
+<td><code>This line + this line too</code></td>
+</tr>
+</tbody>
+</table>
 
 
 <!-- -->
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -614,35 +820,74 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./Endearment.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Terms of endearment</span></span>
+      <a href="./c_NewProj.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Starting a project</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
+      <a href="./e_CallingVariables.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Several methods for calling different variables</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># References {.unnumbered}</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>**What is R?**</span>
+<div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Basic functionality</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">## Shortcuts, arithmetic commands, logic, and other helpful tools </span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">### Shortcuts {.unnumbered} </span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>nd. "What is R?" *The R Foundation*. (<span class="co">[</span><span class="ot">link</span><span class="co">](https://www.r-project.org/about.html)</span>)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Run {.unnumbered}</span></span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>**RStudio vs r**</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>nd. "R and RStudio" *BYU: Department of Statistics*. (<span class="co">[</span><span class="ot">link</span><span class="co">](https://statistics.byu.edu/r-and-rstudio)</span>)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>|    **Task**    | **Windows &amp; Linux** |     **Mac**    |</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>|----------------|---------------------|----------------|</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>|     Run        | <span class="in">`Ctrl + Enter`</span>      |      <span class="in">`Cmd + Return`</span>          |</span>
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>**Excel vs r**</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Abrahams, Amieroh. February 23,2023. "Why should I use R: The Excel R Data Wrangling comparison" *jumping rivers*. (<span class="co">[</span><span class="ot">link</span><span class="co">](https://www.jumpingrivers.com/blog/comparing-r-excel-data-wrangling/)</span>)</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Shortcuts for editing {.unnumbered}</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>**Style**</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>nd. "The tidyverse style guide" *tidyverse*. (<span class="co">[</span><span class="ot">link</span><span class="co">](https://style.tidyverse.org/)</span>)</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>nd. "Google's R Style Guide" *styleguide*. (<span class="co">[</span><span class="ot">link</span><span class="co">](https://google.github.io/styleguide/Rguide.html)</span>)</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="ss">6. </span>https://towardsdatascience.com/an-introduction-to-the-pipe-in-r-823090760d64 pipe</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>| **Task**             | **Windows &amp; Linux** | **Mac**           |</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>|----------------------|---------------------|-------------------|</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>| Copy                 | <span class="in">`Ctrl + C`</span>          | <span class="in">`Cmd + C`</span>         |</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>| Paste                | <span class="in">`Ctrl + V`</span>          | <span class="in">` Cmd + V`</span>        |</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>| Undo                 | <span class="in">`Ctrl + Z`</span>          | <span class="in">`Cmd + Z`</span>         |</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>| Redo                 | <span class="in">`Ctrl + Shift + Z`</span>  | <span class="in">`Cmd + Shift + Z`</span> |</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>| Select All           | <span class="in">`Ctrl + A`</span>          | <span class="in">`Cmd + A`</span>         |</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>| Indent               | <span class="in">`Tab`</span>               | <span class="in">`Tab`</span>             |</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>| Outdent              | <span class="in">`Shift + Tab`</span>       | <span class="in">`Shift + Tab`</span>     |</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>| Insert pipe operator | <span class="in">`Cmd + Shift + M`</span>   | <span class="in">`Cmd + Shift + M`</span> |</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="fu">### Arithmetic operators {.unnumbered}</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>| **Task**       | **Operator** | **Example** |</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>|----------------|--------------|-------------|</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>| Addition       | <span class="in">`+`</span>          | <span class="in">`x + y`</span>     |</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>| Substraction   | <span class="in">`-`</span>          | <span class="in">`x - y`</span>     |</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>| Multiplication | <span class="in">`*`</span>          | <span class="in">`x * y`</span>     |</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>| Division       | <span class="in">`/`</span>          | <span class="in">`x / y`</span>     |</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>| Exponent       | <span class="in">`^`</span>          | <span class="in">`x ^ y`</span>     |</span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a><span class="fu">### Logic commands {.unnumbered} </span></span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>| **Task**                  | **Operator** | **Example** |</span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>|---------------------------|--------------|-------------|</span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>| Equal                     | <span class="in">`==`</span>         | <span class="in">`x == y`</span>    |</span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>| Not equal                 | <span class="in">`!=`</span>         | <span class="in">`x != y`</span>    |</span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>| Greater than              | <span class="in">`&gt;`</span>          | <span class="in">`x &gt; y`</span>     |</span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>| Less than                 | <span class="in">`&lt;`</span>          | <span class="in">`x &lt; y`</span>     |</span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>| Greater than or equal to  | <span class="in">`&gt;=`</span>         | <span class="in">`x &gt;= y`</span>    |</span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>| Less than or equal to     | <span class="in">`&lt;=`</span>         | <span class="in">`x &lt;= y`</span>    |</span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a><span class="fu">### Other important operators {.unnumbered}</span></span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>| **Task**                                                                                | **Operator**   | **Example**                                                        |</span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>|------------------------------------------------------------------------------------------------|----------|----------------------------------------------------------------|</span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>| Call for the help menu for the respective function                                             | <span class="in">`?`</span>      | <span class="in">`?mean`</span>                                                        |</span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>| Assigning a name or value                                                                      | <span class="in">`&lt;-`</span>     | <span class="in">`Name &lt;- "Chop"`</span>                                              |</span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a>| To access one variable in a data set                                                            | <span class="in">`$`</span>      | <span class="in">`DataSet$IWantThisColumn`</span>                                      |</span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>| Searching or calling exact characters                                                          | <span class="in">`""`</span>     | <span class="in">`"Chop Spring"`</span>                                                      |</span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a>| Concatenate (c), combines arguments, both numbers or words, into a vector                      | <span class="in">`c()`</span>    | <span class="in">`Name &lt;- c("Jared", "Daniel", "Chop")`</span> <span class="in">`Numbers &lt;- c(1,2,3)`</span> |</span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a>| Another form of concatenation used when writing long scripts of code which span multiple lines | <span class="in">`+`</span>      | <span class="in">`This line + this line too`</span>                                |</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 

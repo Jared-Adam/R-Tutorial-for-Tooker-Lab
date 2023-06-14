@@ -177,9 +177,11 @@ Sample_DF[, "insect"] #extracting values from all rows, but just the insect colu
 Our output shows us all of the values within the *insect* column. 
 
 ### Last but not least, the pipe: `%>%` {.unnumbered}
+::: {.callout-note}
 For the sake of not working too far ahead, I will not include many examples here.
 In the [data wrangling](h_wrangling.qmd) section, I will be *exclusively* using the pipe operator. 
 Please see that section for working examples of the pipe operator. 
+:::
 
 SO. 
 We have investigated, and worked through, the dollar sign operator and brackets for pulling out specific elements. 

@@ -48,7 +48,10 @@ If we wanted to find all of the columns where there were no NAs, we could simply
 
 In this example, my command is to determine where the NAs are. Using the *arr.ind = TRUE* command, I am telling R to show me *exactly* where they are. 
 In this example we are using *penguins_raw*. 
+
+::: {.callout-note}
 This is the **only** section that will use the raw data set in the example. 
+:::
 
 ```{r}
 #| output: false
@@ -72,7 +75,7 @@ This can be useful when removing variables we are not currently interested in.
 **Remember**, at any manipulation, you can save the changes as a new object which will maintain the integrity of the original if you must back track for whatever reason. 
 
 In this example, we use the **select** function to choose which columns we want to look at. 
-*Notice*, we are back to using *penguins*!
+**Notice**, we are back to using *penguins*!
 
 ```{r}
 # select()
